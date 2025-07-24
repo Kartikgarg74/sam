@@ -1,0 +1,25 @@
+{
+  "name": "@samantha-ai-assistant/mac-automation",
+  "version": "1.0.0",
+  "description": "Core Mac automation engine for Samantha AI Assistant, handling system integration and application control.",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "npx tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@samantha-ai-assistant/types": "workspace:*"
+  }
+}

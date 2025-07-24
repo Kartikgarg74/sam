@@ -1,0 +1,38 @@
+{
+  "name": "@samantha-ai-assistant/voice-core",
+  "version": "1.0.0",
+  "description": "Core voice processing pipeline for Samantha AI Assistant, handling audio capture, transcription, and synthesis.",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "npx tsc --project tsconfig.json",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@picovoice/pvrecorder-node": "^1.2.8",
+    "@samantha-ai-assistant/ai-engine": "workspace:*",
+    "@samantha-ai-assistant/types": "workspace:*",
+    "events": "^3.0.0",
+    "fft.js": "^4.0.4",
+    "node-lame": "^1.4.0",
+    "node-vad": "^1.1.4",
+    "nodejs-whisper": "^0.2.9",
+    "sound-play": "^1.1.0",
+    "web-audio-api": "^0.2.2"
+  },
+  "devDependencies": {
+    "@types/events": "^3.0.3",
+    "@types/node": "^24.0.15"
+  }
+}

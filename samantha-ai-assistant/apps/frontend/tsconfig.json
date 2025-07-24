@@ -1,0 +1,19 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "composite": true,
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "moduleResolution": "NodeNext",
+    "module": "NodeNext"
+  },
+  "include": ["src"],
+  "references": [
+    { "path": "../../packages/voice-core" },
+    { "path": "../../packages/ai-engine" },
+    { "path": "../../packages/mac-automation" },
+    { "path": "../../packages/types" }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "target": "es2021",
+    "module": "NodeNext",
+    "lib": ["es2021", "dom"],
+    "declaration": true,
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "NodeNext",
+    "baseUrl": ".",
+    "paths": {
+      "@samantha-ai-assistant/types": ["./packages/types/dist"],
+      "@samantha-ai-assistant/ai-engine": ["./packages/ai-engine/dist"]
+    }
+  },
+  "references": [
+    { "path": "./packages/voice-core" },
+    { "path": "./packages/ai-engine" },
+    { "path": "./packages/mac-automation" },
+    { "path": "./packages/types" }
+  ],
+  "include": ["packages/*/src"],
+  "exclude": ["node_modules", "dist"]
+}

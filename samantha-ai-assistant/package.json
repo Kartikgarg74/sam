@@ -1,0 +1,25 @@
+{
+  "name": "samantha-ai-assistant",
+  "version": "1.0.0",
+  "description": "Voice-controlled AI assistant for Mac automation, optimized for resource-constrained M2 Macs.",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc --build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "AI",
+    "Voice Assistant",
+    "Mac Automation",
+    "TypeScript",
+    "Monorepo"
+  ],
+  "author": "",
+  "license": "ISC",
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "packageManager": "pnpm@9.0.6"
+}

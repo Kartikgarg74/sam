@@ -1,0 +1,117 @@
+# Node.js dependencies
+node_modules/
+**/node_modules/
+
+# Build output
+dist/
+**/dist/
+build/
+**/build/
+
+# TypeScript build info
+*.tsbuildinfo
+**/*.tsbuildinfo
+
+# Logs
+*.log
+**/*.log
+
+# Python bytecode and cache
+__pycache__/
+**/__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+**/*.egg-info/
+
+# Virtual environments
+venv/
+**/venv/
+.env/
+**/.env/
+
+# Environment variable files
+.env
+.env.*
+**/.env
+**/.env.*
+
+# macOS system files
+.DS_Store
+
+# IDE/editor config
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# OS/Editor swap and backup files
+*.swp
+*.swo
+*.bak
+*.tmp
+*.orig
+
+# pnpm and npm
+pnpm-lock.yaml
+**/pnpm-lock.yaml
+pnpm-workspace.yaml
+**/pnpm-workspace.yaml
+package-lock.json
+**/package-lock.json
+yarn.lock
+**/yarn.lock
+
+# Build artifacts and output
+*.out
+**/*.out
+*.output
+**/*.output
+
+# Test coverage
+coverage/
+**/coverage/
+.nyc_output/
+**/.nyc_output/
+
+# Miscellaneous
+.qodo/
+
+# Ignore railway and Procfile if they contain secrets (uncomment if needed)
+# railway.json
+# Procfile
+
+# Ignore any secret, credential, or key files (add more patterns as needed)
+secrets.*
+**/secrets.*
+*.key
+**/*.key
+*.pem
+**/*.pem
+*.crt
+**/*.crt
+*.p12
+**/*.p12
+*.pfx
+**/*.pfx
+
+# Ignore audio or large binary files if not needed in repo (uncomment if needed)
+# *.wav
+# *.mp3
+# *.ogg
+# *.flac
+
+# Ignore documentation build output (if any)
+docs/_build/
+**/docs/_build/
+
+# Ignore Python pip cache
+pip-wheel-metadata/
+**/pip-wheel-metadata/
+
+# Ignore system files
+Thumbs.db
+Desktop.ini
+
+# END OF .gitignore

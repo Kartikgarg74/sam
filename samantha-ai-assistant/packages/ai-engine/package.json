@@ -1,0 +1,29 @@
+{
+  "name": "@samantha-ai-assistant/ai-engine",
+  "version": "1.0.0",
+  "description": "Core AI processing engine for Samantha AI Assistant, handling intent classification, command routing, and response generation.",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "npx tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1",
+    "@samantha-ai-assistant/types": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.15"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "composite": true,
+    "lib": ["es2020", "dom", "dom.iterable", "webworker"],
+    "module": "NodeNext",
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "types": ["node", "events"],
+    "paths": {
+      "@samantha-ai-assistant/ai-engine": ["../ai-engine/dist"]
+    }
+  },
+  "include": ["src", "src/audio", "src/transcription", "src/synthesis", "src/playback", "src/audio/vad-processor.ts", "src/types"],
+  "references": [
+    { "path": "../types" },
+    { "path": "../ai-engine" }
+  ]
+}
