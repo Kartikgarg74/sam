@@ -12,9 +12,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@samantha-ai-assistant/voice-core": "workspace:*",
-    "@samantha-ai-assistant/ai-engine": "workspace:*",
-    "@samantha-ai-assistant/mac-automation": "workspace:*"
+    "@samantha-ai-assistant/voice-core": "1.0.0",
+    "@samantha-ai-assistant/ai-engine": "1.0.0",
+    "@samantha-ai-assistant/mac-automation": "1.0.0"
   },
   "devDependencies": {
     "typescript": "^5.0.0"

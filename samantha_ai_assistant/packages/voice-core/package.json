@@ -21,8 +21,8 @@
   "license": "ISC",
   "dependencies": {
     "@picovoice/pvrecorder-node": "^1.2.8",
-    "@samantha-ai-assistant/ai-engine": "workspace:*",
-    "@samantha-ai-assistant/types": "workspace:*",
+    "@samantha-ai-assistant/ai-engine": "1.0.0",
+    "@samantha-ai-assistant/types": "1.0.0",
     "events": "^3.0.0",
     "fft.js": "^4.0.4",
     "node-lame": "^1.4.0",

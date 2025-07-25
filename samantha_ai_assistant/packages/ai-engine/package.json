@@ -21,7 +21,7 @@
   "license": "ISC",
   "dependencies": {
     "@google/generative-ai": "^0.24.1",
-    "@samantha-ai-assistant/types": "workspace:*"
+    "@samantha-ai-assistant/types": "1.0.0"
   },
   "devDependencies": {
     "@types/node": "^24.0.15"
