@@ -115,3 +115,4 @@ Thumbs.db
 Desktop.ini
 
 # END OF .gitignore
+.cursor/system_prompt.md

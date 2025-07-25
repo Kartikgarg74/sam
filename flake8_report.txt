@@ -1,0 +1,383 @@
+samantha-ai-assistant/apps/backend/api_v1_endpoints.py:162:13: E128 continuation line under-indented for visual indent
+samantha-ai-assistant/apps/backend/auth.py:40:80: E501 line too long (84 > 79 characters)
+samantha-ai-assistant/backend-flask-legacy/app.py:42:1: E302 expected 2 blank lines, found 1
+samantha-ai-assistant/backend-flask-legacy/app.py:52:1: E305 expected 2 blank lines after class or function definition, found 1
+samantha-ai-assistant/backend-flask-legacy/app.py:58:1: E302 expected 2 blank lines, found 1
+samantha-ai-assistant/backend-flask-legacy/app.py:66:1: E302 expected 2 blank lines, found 1
+samantha-ai-assistant/backend-flask-legacy/app.py:78:1: E302 expected 2 blank lines, found 1
+samantha-ai-assistant/backend-flask-legacy/app.py:82:5: E722 do not use bare 'except'
+samantha-ai-assistant/backend-flask-legacy/app.py:85:1: E302 expected 2 blank lines, found 1
+samantha-ai-assistant/backend-flask-legacy/app.py:90:5: E722 do not use bare 'except'
+samantha-ai-assistant/backend-flask-legacy/app.py:93:1: E302 expected 2 blank lines, found 1
+samantha-ai-assistant/backend-flask-legacy/app.py:101:80: E501 line too long (86 > 79 characters)
+samantha-ai-assistant/backend-flask-legacy/app.py:103:1: E302 expected 2 blank lines, found 1
+samantha-ai-assistant/backend-flask-legacy/app.py:110:1: E302 expected 2 blank lines, found 1
+samantha-ai-assistant/backend-flask-legacy/app.py:119:1: E302 expected 2 blank lines, found 1
+samantha-ai-assistant/backend-flask-legacy/app.py:153:1: E302 expected 2 blank lines, found 1
+samantha-ai-assistant/backend-flask-legacy/app.py:156:80: E501 line too long (81 > 79 characters)
+samantha-ai-assistant/backend-flask-legacy/app.py:171:1: E302 expected 2 blank lines, found 1
+samantha-ai-assistant/backend-flask-legacy/app.py:175:80: E501 line too long (106 > 79 characters)
+samantha-ai-assistant/backend-flask-legacy/app.py:202:1: E302 expected 2 blank lines, found 1
+samantha-ai-assistant/backend-flask-legacy/app.py:209:80: E501 line too long (87 > 79 characters)
+samantha-ai-assistant/backend-flask-legacy/app.py:220:1: E302 expected 2 blank lines, found 1
+samantha-ai-assistant/backend-flask-legacy/app.py:244:1: E302 expected 2 blank lines, found 1
+samantha-ai-assistant/backend-flask-legacy/app.py:253:1: E302 expected 2 blank lines, found 1
+samantha-ai-assistant/backend-flask-legacy/app.py:271:1: E305 expected 2 blank lines after class or function definition, found 1
+samantha-ai-assistant/backend-flask-legacy/app.py:273:5: F821 undefined name 'init_database'
+samantha-ai-assistant/backend-flask-legacy/app.py:279:1: E302 expected 2 blank lines, found 1
+samantha-ai-assistant/backend-flask-legacy/models/command.py:8:1: E302 expected 2 blank lines, found 1
+samantha-ai-assistant/backend-flask-legacy/models/command.py:10:80: E501 line too long (89 > 79 characters)
+samantha-ai-assistant/backend-flask-legacy/models/command.py:35:80: E501 line too long (98 > 79 characters)
+samantha-ai-assistant/backend-flask-legacy/models/command.py:39:80: E501 line too long (101 > 79 characters)
+samantha-ai-assistant/backend-flask-legacy/models/user.py:8:1: E302 expected 2 blank lines, found 1
+samantha-ai-assistant/backend-flask-legacy/models/user.py:31:80: E501 line too long (89 > 79 characters)
+samantha-ai-assistant/backend-flask-legacy/models/user.py:34:80: E501 line too long (92 > 79 characters)
+samantha-ai-assistant/backend-flask-legacy/models/user.py:43:80: E501 line too long (108 > 79 characters)
+samantha-ai-assistant/backend-flask-legacy/models/user.py:47:80: E501 line too long (123 > 79 characters)
+samantha-ai-assistant/backend-flask-legacy/models/user.py:52:80: E501 line too long (121 > 79 characters)
+samantha-ai-assistant/backend-flask-legacy/routes/api.py:14:1: E302 expected 2 blank lines, found 1
+samantha-ai-assistant/backend-flask-legacy/routes/api.py:23:1: E302 expected 2 blank lines, found 1
+samantha-ai-assistant/backend-flask-legacy/routes/api.py:45:1: E302 expected 2 blank lines, found 1
+samantha-ai-assistant/backend-flask-legacy/routes/api.py:75:1: E302 expected 2 blank lines, found 1
+samantha-ai-assistant/backend-flask-legacy/routes/api.py:108:1: E302 expected 2 blank lines, found 1
+samantha-ai-assistant/backend-flask-legacy/routes/api.py:135:1: E302 expected 2 blank lines, found 1
+samantha-ai-assistant/backend-flask-legacy/routes/api.py:157:1: E302 expected 2 blank lines, found 1
+samantha-ai-assistant/backend-flask-legacy/routes/api.py:165:1: E302 expected 2 blank lines, found 1
+samantha-ai-assistant/backend-flask-legacy/routes/websocket.py:12:1: E302 expected 2 blank lines, found 1
+samantha-ai-assistant/backend-flask-legacy/routes/websocket.py:224:80: E501 line too long (80 > 79 characters)
+samantha-ai-assistant/backend-flask-legacy/services/__init__.py:10:80: E501 line too long (83 > 79 characters)
+samantha-ai-assistant/backend-flask-legacy/services/ai_processor.py:13:1: E302 expected 2 blank lines, found 1
+samantha-ai-assistant/backend-flask-legacy/services/ai_processor.py:27:80: E501 line too long (107 > 79 characters)
+samantha-ai-assistant/backend-flask-legacy/services/ai_processor.py:45:80: E501 line too long (90 > 79 characters)
+samantha-ai-assistant/backend-flask-legacy/services/ai_processor.py:49:80: E501 line too long (87 > 79 characters)
+samantha-ai-assistant/backend-flask-legacy/services/ai_processor.py:53:80: E501 line too long (84 > 79 characters)
+samantha-ai-assistant/backend-flask-legacy/services/ai_processor.py:57:80: E501 line too long (85 > 79 characters)
+samantha-ai-assistant/backend-flask-legacy/services/ai_processor.py:62:80: E501 line too long (118 > 79 characters)
+samantha-ai-assistant/backend-flask-legacy/services/ai_processor.py:88:80: E501 line too long (158 > 79 characters)
+samantha-ai-assistant/backend-flask-legacy/services/ai_processor.py:98:80: E501 line too long (111 > 79 characters)
+samantha-ai-assistant/backend-flask-legacy/services/ai_processor.py:99:80: E501 line too long (141 > 79 characters)
+samantha-ai-assistant/backend-flask-legacy/services/ai_processor.py:101:80: E501 line too long (83 > 79 characters)
+samantha-ai-assistant/backend-flask-legacy/services/ai_processor.py:112:80: E501 line too long (82 > 79 characters)
+samantha-ai-assistant/backend-flask-legacy/services/ai_processor.py:137:80: E501 line too long (116 > 79 characters)
+samantha-ai-assistant/backend-flask-legacy/services/ai_processor.py:138:80: E501 line too long (94 > 79 characters)
+samantha-ai-assistant/backend-flask-legacy/services/ai_processor.py:148:80: E501 line too long (92 > 79 characters)
+samantha-ai-assistant/backend-flask-legacy/services/ai_processor.py:154:80: E501 line too long (81 > 79 characters)
+samantha-ai-assistant/backend-flask-legacy/services/ai_processor.py:161:80: E501 line too long (102 > 79 characters)
+samantha-ai-assistant/backend-flask-legacy/services/ai_processor.py:174:80: E501 line too long (100 > 79 characters)
+samantha-ai-assistant/backend-flask-legacy/services/database.py:17:1: E302 expected 2 blank lines, found 1
+samantha-ai-assistant/backend-flask-legacy/services/database.py:88:80: E501 line too long (87 > 79 characters)
+samantha-ai-assistant/backend-flask-legacy/services/database.py:95:80: E501 line too long (91 > 79 characters)
+samantha-ai-assistant/backend-flask-legacy/services/database.py:116:80: E501 line too long (84 > 79 characters)
+samantha-ai-assistant/backend-flask-legacy/services/database.py:150:80: E501 line too long (92 > 79 characters)
+samantha-ai-assistant/backend-flask-legacy/services/database.py:200:80: E501 line too long (86 > 79 characters)
+samantha-ai-assistant/backend-flask-legacy/services/database.py:291:80: E501 line too long (84 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/flatted@3.3.3/node_modules/flatted/python/flatted.py:19:1: E302 expected 2 blank lines, found 1
+samantha-ai-assistant/node_modules/.pnpm/flatted@3.3.3/node_modules/flatted/python/flatted.py:24:1: E302 expected 2 blank lines, found 1
+samantha-ai-assistant/node_modules/.pnpm/flatted@3.3.3/node_modules/flatted/python/flatted.py:37:1: E302 expected 2 blank lines, found 1
+samantha-ai-assistant/node_modules/.pnpm/flatted@3.3.3/node_modules/flatted/python/flatted.py:43:1: E302 expected 2 blank lines, found 1
+samantha-ai-assistant/node_modules/.pnpm/flatted@3.3.3/node_modules/flatted/python/flatted.py:46:1: E302 expected 2 blank lines, found 1
+samantha-ai-assistant/node_modules/.pnpm/flatted@3.3.3/node_modules/flatted/python/flatted.py:49:1: E302 expected 2 blank lines, found 1
+samantha-ai-assistant/node_modules/.pnpm/flatted@3.3.3/node_modules/flatted/python/flatted.py:52:1: E302 expected 2 blank lines, found 1
+samantha-ai-assistant/node_modules/.pnpm/flatted@3.3.3/node_modules/flatted/python/flatted.py:59:1: E302 expected 2 blank lines, found 1
+samantha-ai-assistant/node_modules/.pnpm/flatted@3.3.3/node_modules/flatted/python/flatted.py:67:1: E302 expected 2 blank lines, found 1
+samantha-ai-assistant/node_modules/.pnpm/flatted@3.3.3/node_modules/flatted/python/flatted.py:77:1: E302 expected 2 blank lines, found 1
+samantha-ai-assistant/node_modules/.pnpm/flatted@3.3.3/node_modules/flatted/python/flatted.py:81:9: E722 do not use bare 'except'
+samantha-ai-assistant/node_modules/.pnpm/flatted@3.3.3/node_modules/flatted/python/flatted.py:86:1: E302 expected 2 blank lines, found 1
+samantha-ai-assistant/node_modules/.pnpm/flatted@3.3.3/node_modules/flatted/python/flatted.py:101:1: E302 expected 2 blank lines, found 1
+samantha-ai-assistant/node_modules/.pnpm/flatted@3.3.3/node_modules/flatted/python/flatted.py:117:1: E302 expected 2 blank lines, found 1
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/examples/python/test_whisper_processor.py:4:80: E501 line too long (92 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/examples/python/test_whisper_processor.py:7:25: W292 no newline at end of file
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/examples/python/whisper_processor.py:5:1: E302 expected 2 blank lines, found 1
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/examples/python/whisper_processor.py:7:80: E501 line too long (85 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/examples/python/whisper_processor.py:19:80: E501 line too long (164 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/examples/python/whisper_processor.py:27:80: E501 line too long (104 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/examples/python/whisper_processor.py:41:1: E302 expected 2 blank lines, found 1
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/examples/python/whisper_processor.py:53:1: E305 expected 2 blank lines after class or function definition, found 1
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/examples/server.py:6:1: F401 'urllib.parse' imported but unused
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/examples/server.py:15:1: E302 expected 2 blank lines, found 1
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/examples/server.py:50:80: E501 line too long (143 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/examples/server.py:56:80: E501 line too long (97 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/examples/server.py:57:80: E501 line too long (88 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/examples/server.py:61:80: E501 line too long (85 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/examples/server.py:97:1: E305 expected 2 blank lines after class or function definition, found 1
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/examples/server.py:100:1: E302 expected 2 blank lines, found 1
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/examples/server.py:103:1: E305 expected 2 blank lines after class or function definition, found 1
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/examples/server.py:106:80: E501 line too long (82 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/examples/talk-llama/eleven-labs.py:6:5: E128 continuation line under-indented for visual indent
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/examples/talk-llama/eleven-labs.py:8:5: E128 continuation line under-indented for visual indent
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/examples/talk-llama/eleven-labs.py:12:5: E128 continuation line under-indented for visual indent
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/examples/talk-llama/eleven-labs.py:13:5: E128 continuation line under-indented for visual indent
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/examples/talk-llama/eleven-labs.py:15:5: E128 continuation line under-indented for visual indent
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/examples/talk-llama/eleven-labs.py:17:5: E128 continuation line under-indented for visual indent
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/examples/talk-llama/eleven-labs.py:22:5: E128 continuation line under-indented for visual indent
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/examples/talk-llama/eleven-labs.py:23:5: E128 continuation line under-indented for visual indent
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/examples/talk-llama/eleven-labs.py:25:5: E128 continuation line under-indented for visual indent
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/examples/talk-llama/eleven-labs.py:27:5: E128 continuation line under-indented for visual indent
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/examples/talk-llama/eleven-labs.py:37:5: E128 continuation line under-indented for visual indent
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/examples/talk-llama/eleven-labs.py:38:5: E128 continuation line under-indented for visual indent
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/examples/talk-llama/eleven-labs.py:40:5: E128 continuation line under-indented for visual indent
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/examples/talk-llama/eleven-labs.py:47:80: E501 line too long (122 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/examples/talk-llama/eleven-labs.py:50:1: E402 module level import not at top of file
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/examples/talk-llama/eleven-labs.py:71:5: E265 block comment should start with '# '
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/examples/talk-llama/eleven-labs.py:80:27: W291 trailing whitespace
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/ggml/src/ggml-cuda/template-instances/generate_cu_files.py:6:80: E501 line too long (118 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/ggml/src/ggml-cuda/template-instances/generate_cu_files.py:8:80: E501 line too long (104 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/ggml/src/ggml-cuda/template-instances/generate_cu_files.py:15:80: E501 line too long (110 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/ggml/src/ggml-cuda/template-instances/generate_cu_files.py:21:80: E501 line too long (103 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/ggml/src/ggml-cuda/template-instances/generate_cu_files.py:24:80: E501 line too long (93 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/ggml/src/ggml-cuda/template-instances/generate_cu_files.py:25:80: E501 line too long (93 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/ggml/src/ggml-cuda/template-instances/generate_cu_files.py:26:80: E501 line too long (103 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/ggml/src/ggml-cuda/template-instances/generate_cu_files.py:30:80: E501 line too long (98 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/ggml/src/ggml-cuda/template-instances/generate_cu_files.py:57:80: E501 line too long (138 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/ggml/src/ggml-cuda/template-instances/generate_cu_files.py:58:80: E501 line too long (122 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/ggml/src/ggml-cuda/template-instances/generate_cu_files.py:65:80: E501 line too long (90 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/ggml/src/ggml-cuda/template-instances/generate_cu_files.py:74:80: E501 line too long (135 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-h5-to-coreml.py:4:80: E501 line too long (105 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-h5-to-coreml.py:8:1: E402 module level import not at top of file
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-h5-to-coreml.py:10:1: E402 module level import not at top of file
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-h5-to-coreml.py:11:1: E402 module level import not at top of file
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-h5-to-coreml.py:12:1: E402 module level import not at top of file
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-h5-to-coreml.py:13:1: F401 'huggingface_hub.metadata_update' imported but unused
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-h5-to-coreml.py:13:1: E402 module level import not at top of file
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-h5-to-coreml.py:41:1: E302 expected 2 blank lines, found 1
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-h5-to-coreml.py:55:1: E302 expected 2 blank lines, found 1
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-h5-to-coreml.py:56:80: E501 line too long (94 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-h5-to-coreml.py:76:80: E501 line too long (82 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-h5-to-coreml.py:79:1: E305 expected 2 blank lines after class or function definition, found 1
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-h5-to-coreml.py:81:80: E501 line too long (215 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-h5-to-coreml.py:82:80: E501 line too long (161 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-h5-to-coreml.py:83:80: E501 line too long (96 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-h5-to-coreml.py:84:80: E501 line too long (99 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-h5-to-coreml.py:85:80: E501 line too long (121 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-h5-to-coreml.py:88:80: E501 line too long (167 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-h5-to-coreml.py:109:80: E501 line too long (89 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-h5-to-coreml.py:114:80: E501 line too long (93 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-h5-to-ggml.py:9:80: E501 line too long (84 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-h5-to-ggml.py:18:1: F401 'io' imported but unused
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-h5-to-ggml.py:23:1: F401 'code' imported but unused
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-h5-to-ggml.py:31:40: E203 whitespace before ':'
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-h5-to-ggml.py:32:40: E203 whitespace before ':'
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-h5-to-ggml.py:33:40: E203 whitespace before ':'
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-h5-to-ggml.py:34:40: E203 whitespace before ':'
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-h5-to-ggml.py:35:40: E203 whitespace before ':'
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-h5-to-ggml.py:36:40: E203 whitespace before ':'
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-h5-to-ggml.py:37:40: E203 whitespace before ':'
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-h5-to-ggml.py:38:40: E203 whitespace before ':'
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-h5-to-ggml.py:39:40: E203 whitespace before ':'
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-h5-to-ggml.py:40:40: E203 whitespace before ':'
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-h5-to-ggml.py:41:40: E203 whitespace before ':'
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-h5-to-ggml.py:42:40: E203 whitespace before ':'
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-h5-to-ggml.py:43:40: E203 whitespace before ':'
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-h5-to-ggml.py:44:40: E203 whitespace before ':'
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-h5-to-ggml.py:46:40: E203 whitespace before ':'
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-h5-to-ggml.py:47:40: E203 whitespace before ':'
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-h5-to-ggml.py:49:40: E203 whitespace before ':'
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-h5-to-ggml.py:50:40: E203 whitespace before ':'
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-h5-to-ggml.py:54:1: E302 expected 2 blank lines, found 1
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-h5-to-ggml.py:58:80: E501 line too long (96 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-h5-to-ggml.py:59:80: E501 line too long (103 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-h5-to-ggml.py:61:80: E501 line too long (81 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-h5-to-ggml.py:64:80: E501 line too long (110 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-h5-to-ggml.py:75:1: E305 expected 2 blank lines after class or function definition, found 1
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-h5-to-ggml.py:76:80: E501 line too long (95 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-h5-to-ggml.py:79:10: E221 multiple spaces before operator
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-h5-to-ggml.py:81:8: E221 multiple spaces before operator
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-h5-to-ggml.py:84:66: E201 whitespace after '('
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-h5-to-ggml.py:84:80: E501 line too long (88 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-h5-to-ggml.py:89:80: E501 line too long (97 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-h5-to-ggml.py:92:80: E501 line too long (82 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-h5-to-ggml.py:94:80: E501 line too long (97 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-h5-to-ggml.py:96:1: W293 blank line contains whitespace
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-h5-to-ggml.py:99:1: E265 block comment should start with '# '
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-h5-to-ggml.py:102:80: E501 line too long (82 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-h5-to-ggml.py:119:41: E261 at least two spaces before inline comment
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-h5-to-ggml.py:139:18: E231 missing whitespace after ':'
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-h5-to-ggml.py:152:80: E501 line too long (164 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-h5-to-ggml.py:183:38: E203 whitespace before ','
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-h5-to-ggml.py:183:45: E203 whitespace before ','
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-h5-to-ggml.py:189:80: E501 line too long (87 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-h5-to-ggml.py:194:45: E272 multiple spaces before keyword
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-h5-to-ggml.py:195:45: E272 multiple spaces before keyword
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-h5-to-ggml.py:217:28: E203 whitespace before ','
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-pt-to-ggml.py:3:80: E501 line too long (112 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-pt-to-ggml.py:17:80: E501 line too long (89 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-pt-to-ggml.py:35:1: F401 'os' imported but unused
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-pt-to-ggml.py:39:1: F401 'code' imported but unused
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-pt-to-ggml.py:44:1: E265 block comment should start with '# '
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-pt-to-ggml.py:45:1: E265 block comment should start with '# '
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-pt-to-ggml.py:47:80: E501 line too long (116 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-pt-to-ggml.py:48:1: E265 block comment should start with '# '
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-pt-to-ggml.py:148:1: E265 block comment should start with '# '
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-pt-to-ggml.py:150:1: E266 too many leading '#' for block comment
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-pt-to-ggml.py:150:80: E501 line too long (118 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-pt-to-ggml.py:151:1: E265 block comment should start with '# '
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-pt-to-ggml.py:171:1: E302 expected 2 blank lines, found 1
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-pt-to-ggml.py:175:80: E501 line too long (96 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-pt-to-ggml.py:176:80: E501 line too long (103 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-pt-to-ggml.py:178:80: E501 line too long (81 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-pt-to-ggml.py:181:80: E501 line too long (110 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-pt-to-ggml.py:194:80: E501 line too long (94 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-pt-to-ggml.py:197:10: E221 multiple spaces before operator
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-pt-to-ggml.py:199:8: E221 multiple spaces before operator
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-pt-to-ggml.py:207:54: E203 whitespace before ','
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-pt-to-ggml.py:215:1: E265 block comment should start with '# '
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-pt-to-ggml.py:216:1: E265 block comment should start with '# '
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-pt-to-ggml.py:217:1: E265 block comment should start with '# '
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-pt-to-ggml.py:223:5: E265 block comment should start with '# '
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-pt-to-ggml.py:225:1: E265 block comment should start with '# '
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-pt-to-ggml.py:228:80: E501 line too long (90 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-pt-to-ggml.py:232:80: E501 line too long (110 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-pt-to-ggml.py:235:80: E501 line too long (111 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-pt-to-ggml.py:238:80: E501 line too long (100 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-pt-to-ggml.py:242:18: E231 missing whitespace after ':'
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-pt-to-ggml.py:247:80: E501 line too long (129 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-pt-to-ggml.py:255:80: E501 line too long (106 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-pt-to-ggml.py:268:41: E261 at least two spaces before inline comment
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-pt-to-ggml.py:297:34: E203 whitespace before ','
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-pt-to-ggml.py:297:41: E203 whitespace before ','
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-pt-to-ggml.py:307:80: E501 line too long (87 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-pt-to-ggml.py:312:45: E272 multiple spaces before keyword
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-pt-to-ggml.py:313:45: E272 multiple spaces before keyword
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-pt-to-ggml.py:323:5: E265 block comment should start with '# '
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-pt-to-ggml.py:341:28: E203 whitespace before ','
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-silero-vad-to-ggml.py:4:1: F401 'torch' imported but unused
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-silero-vad-to-ggml.py:8:1: E302 expected 2 blank lines, found 1
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-silero-vad-to-ggml.py:147:80: E501 line too long (108 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-silero-vad-to-ggml.py:185:53: E225 missing whitespace around operator
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-silero-vad-to-ggml.py:190:1: E305 expected 2 blank lines after class or function definition, found 1
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-silero-vad-to-ggml.py:191:80: E501 line too long (99 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-silero-vad-to-ggml.py:192:80: E501 line too long (99 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-silero-vad-to-ggml.py:193:80: E501 line too long (105 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-whisper-to-coreml.py:10:80: E501 line too long (82 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-whisper-to-coreml.py:11:80: E501 line too long (81 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-whisper-to-coreml.py:12:80: E501 line too long (121 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-whisper-to-coreml.py:15:80: E501 line too long (84 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-whisper-to-coreml.py:19:80: E501 line too long (80 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-whisper-to-coreml.py:25:1: E302 expected 2 blank lines, found 1
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-whisper-to-coreml.py:41:80: E501 line too long (93 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-whisper-to-coreml.py:44:1: E302 expected 2 blank lines, found 1
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-whisper-to-coreml.py:51:1: E302 expected 2 blank lines, found 1
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-whisper-to-coreml.py:54:21: E222 multiple spaces after operator
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-whisper-to-coreml.py:68:80: E501 line too long (98 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-whisper-to-coreml.py:69:80: E501 line too long (93 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-whisper-to-coreml.py:74:80: E501 line too long (96 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-whisper-to-coreml.py:82:80: E501 line too long (96 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-whisper-to-coreml.py:93:29: E231 missing whitespace after ','
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-whisper-to-coreml.py:103:80: E501 line too long (80 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-whisper-to-coreml.py:105:80: E501 line too long (119 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-whisper-to-coreml.py:106:80: E501 line too long (153 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-whisper-to-coreml.py:113:80: E501 line too long (81 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-whisper-to-coreml.py:115:20: E222 multiple spaces after operator
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-whisper-to-coreml.py:117:26: E222 multiple spaces after operator
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-whisper-to-coreml.py:117:80: E501 line too long (94 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-whisper-to-coreml.py:118:29: E222 multiple spaces after operator
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-whisper-to-coreml.py:118:80: E501 line too long (80 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-whisper-to-coreml.py:121:19: E222 multiple spaces after operator
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-whisper-to-coreml.py:130:80: E501 line too long (89 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-whisper-to-coreml.py:134:80: E501 line too long (80 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-whisper-to-coreml.py:146:80: E501 line too long (92 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-whisper-to-coreml.py:149:55: E231 missing whitespace after ','
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-whisper-to-coreml.py:149:80: E501 line too long (83 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-whisper-to-coreml.py:159:1: E302 expected 2 blank lines, found 1
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-whisper-to-coreml.py:161:80: E501 line too long (90 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-whisper-to-coreml.py:164:20: E225 missing whitespace around operator
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-whisper-to-coreml.py:165:80: E501 line too long (102 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-whisper-to-coreml.py:167:16: E225 missing whitespace around operator
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-whisper-to-coreml.py:177:71: E203 whitespace before ':'
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-whisper-to-coreml.py:177:80: E501 line too long (94 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-whisper-to-coreml.py:181:53: E231 missing whitespace after ','
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-whisper-to-coreml.py:181:55: E231 missing whitespace after ','
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-whisper-to-coreml.py:181:57: E231 missing whitespace after ','
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-whisper-to-coreml.py:182:26: E231 missing whitespace after ','
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-whisper-to-coreml.py:190:24: E231 missing whitespace after ','
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-whisper-to-coreml.py:190:26: E231 missing whitespace after ','
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-whisper-to-coreml.py:190:28: E231 missing whitespace after ','
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-whisper-to-coreml.py:192:80: E501 line too long (156 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-whisper-to-coreml.py:195:80: E501 line too long (103 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-whisper-to-coreml.py:196:80: E501 line too long (114 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-whisper-to-coreml.py:199:19: E275 missing whitespace after keyword
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-whisper-to-coreml.py:200:80: E501 line too long (103 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-whisper-to-coreml.py:201:80: E501 line too long (114 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-whisper-to-coreml.py:205:1: E302 expected 2 blank lines, found 1
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-whisper-to-coreml.py:226:80: E501 line too long (90 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-whisper-to-coreml.py:234:80: E501 line too long (99 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-whisper-to-coreml.py:235:80: E501 line too long (92 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-whisper-to-coreml.py:237:80: E501 line too long (82 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-whisper-to-coreml.py:248:1: E302 expected 2 blank lines, found 1
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-whisper-to-coreml.py:268:1: E302 expected 2 blank lines, found 1
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-whisper-to-coreml.py:296:80: E501 line too long (202 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-whisper-to-coreml.py:297:80: E501 line too long (96 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-whisper-to-coreml.py:298:80: E501 line too long (99 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-whisper-to-coreml.py:299:80: E501 line too long (121 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-whisper-to-coreml.py:302:80: E501 line too long (179 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-whisper-to-openvino.py:5:1: F401 'openvino.tools.mo' imported but unused
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-whisper-to-openvino.py:10:1: E302 expected 2 blank lines, found 1
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-whisper-to-openvino.py:17:5: E265 block comment should start with '# '
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-whisper-to-openvino.py:17:80: E501 line too long (112 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-whisper-to-openvino.py:39:80: E501 line too long (116 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-whisper-to-openvino.py:48:80: E501 line too long (202 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/convert-whisper-to-openvino.py:51:80: E501 line too long (162 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/ggml_to_pt.py:19:1: E303 too many blank lines (3)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/ggml_to_pt.py:22:80: E501 line too long (187 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/ggml_to_pt.py:33:80: E501 line too long (89 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/ggml_to_pt.py:43:1: W293 blank line contains whitespace
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/ggml_to_pt.py:45:5: E303 too many blank lines (2)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/ggml_to_pt.py:53:1: W293 blank line contains whitespace
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/ggml_to_pt.py:54:27: W291 trailing whitespace
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/ggml_to_pt.py:59:5: E303 too many blank lines (2)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/ggml_to_pt.py:63:1: W293 blank line contains whitespace
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/ggml_to_pt.py:75:80: E501 line too long (86 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/ggml_to_pt.py:77:80: E501 line too long (86 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/ggml_to_pt.py:79:1: W293 blank line contains whitespace
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/ggml_to_pt.py:80:9: E303 too many blank lines (2)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/ggml_to_pt.py:80:19: E271 multiple spaces after keyword
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/ggml_to_pt.py:81:1: W293 blank line contains whitespace
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/ggml_to_pt.py:83:1: W293 blank line contains whitespace
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/ggml_to_pt.py:84:1: W293 blank line contains whitespace
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/ggml_to_pt.py:85:9: E303 too many blank lines (2)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/ggml_to_pt.py:86:1: W293 blank line contains whitespace
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/models/ggml_to_pt.py:92:1: E402 module level import not at top of file
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/scripts/bench.py:16:80: E501 line too long (86 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/scripts/bench.py:43:80: E501 line too long (80 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/scripts/bench.py:103:5: F841 local variable 'e' is assigned to but never used
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/scripts/bench.py:116:80: E501 line too long (84 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/scripts/bench.py:151:80: E501 line too long (112 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/scripts/bench.py:154:80: E501 line too long (81 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/scripts/bench.py:162:80: E501 line too long (83 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/scripts/bench.py:163:80: E501 line too long (84 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/scripts/bench.py:170:80: E501 line too long (85 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/scripts/bench.py:171:80: E501 line too long (87 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/scripts/bench.py:176:80: E501 line too long (113 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/scripts/bench.py:214:80: E501 line too long (88 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/tests/librispeech/eval.py:6:1: E302 expected 2 blank lines, found 1
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/tests/librispeech/eval.py:12:20: E211 whitespace before '['
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/tests/librispeech/eval.py:15:1: E302 expected 2 blank lines, found 1
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/tests/librispeech/eval.py:24:1: E302 expected 2 blank lines, found 1
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/tests/librispeech/eval.py:30:1: E302 expected 2 blank lines, found 1
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/tests/librispeech/eval.py:46:1: E305 expected 2 blank lines after class or function definition, found 1
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/tests/librispeech/normalizers/__init__.py:1:1: F401 '.basic.BasicTextNormalizer' imported but unused
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/tests/librispeech/normalizers/__init__.py:2:1: F401 '.english.EnglishTextNormalizer' imported but unused
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/tests/librispeech/normalizers/basic.py:52:80: E501 line too long (85 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/tests/librispeech/normalizers/basic.py:61:80: E501 line too long (85 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/tests/librispeech/normalizers/basic.py:63:80: E501 line too long (82 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/tests/librispeech/normalizers/basic.py:69:80: E501 line too long (80 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/tests/librispeech/normalizers/english.py:18:80: E501 line too long (91 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/tests/librispeech/normalizers/english.py:20:80: E501 line too long (81 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/tests/librispeech/normalizers/english.py:84:80: E501 line too long (87 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/tests/librispeech/normalizers/english.py:107:80: E501 line too long (80 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/tests/librispeech/normalizers/english.py:110:80: E501 line too long (82 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/tests/librispeech/normalizers/english.py:193:80: E501 line too long (83 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/tests/librispeech/normalizers/english.py:355:80: E501 line too long (81 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/tests/librispeech/normalizers/english.py:434:80: E501 line too long (81 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/tests/librispeech/normalizers/english.py:444:80: E501 line too long (88 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/tests/librispeech/normalizers/english.py:506:80: E501 line too long (90 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/tests/librispeech/normalizers/english.py:529:80: E501 line too long (80 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/tests/librispeech/normalizers/english.py:532:80: E501 line too long (80 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/tests/librispeech/normalizers/english.py:538:80: E501 line too long (88 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/tests/librispeech/normalizers/english.py:539:80: E501 line too long (83 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/tests/librispeech/normalizers/english.py:544:80: E501 line too long (84 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/nodejs-whisper@0.2.9/node_modules/nodejs-whisper/cpp/whisper.cpp/tests/librispeech/normalizers/english.py:548:80: E501 line too long (85 > 79 characters)
+samantha-ai-assistant/node_modules/.pnpm/speaker@0.3.1/node_modules/speaker/deps/mpg123/scripts/tag_lyrics.py:23:3: E999 SyntaxError: Missing parentheses in call to 'print'. Did you mean print(...)?
+samantha-ai-assistant/packages/analytics/predictive.py:25:80: E501 line too long (86 > 79 characters)
+samantha-ai-assistant/packages/monitoring/metrics.py:5:80: E501 line too long (80 > 79 characters)
+samantha-ai-assistant/packages/monitoring/metrics.py:14:80: E501 line too long (81 > 79 characters)

@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "name": "samantha-ai-frontend",
+  "builds": [
+    { "src": "apps/web/package.json", "use": "@vercel/next" }
+  ],
+  "env": {
+    "NEXT_PUBLIC_API_URL": "${NEXT_PUBLIC_API_URL}"
+  },
+  "routes": [
+    { "src": "/(.*)", "dest": "/apps/web/$1" }
+  ]
+}

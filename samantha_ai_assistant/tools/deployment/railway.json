@@ -1,0 +1,21 @@
+{
+  "project": "samantha-ai-backend",
+  "services": [
+    {
+      "name": "backend",
+      "source": "../apps/backend",
+      "startCommand": "uvicorn main:app --host 0.0.0.0 --port $PORT",
+      "envs": [
+        { "key": "SECRET_KEY", "value": "${SECRET_KEY}" },
+        { "key": "RAILWAY_ENVIRONMENT", "value": "${RAILWAY_ENVIRONMENT}" }
+      ],
+      "autoScale": true,
+      "healthcheckPath": "/api/v1/status",
+      "resourceLimits": {
+        "cpu": "500m",
+        "memory": "1024Mi"
+      },
+      "concurrency": 10
+    }
+  ]
+}

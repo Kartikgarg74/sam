@@ -1,0 +1,80 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install backend dependencies
+        run: |
+          cd samantha-ai-assistant/apps/backend
+          pip install -r requirements.txt
+      - name: Run backend tests
+        run: |
+          cd samantha-ai-assistant/apps/backend
+          pytest --maxfail=1 --disable-warnings --tb=short --cov=.
+      - name: Run backend lint (flake8)
+        run: |
+          pip install flake8
+          cd samantha-ai-assistant/apps/backend
+          flake8 .
+      - name: Run backend type checks (mypy)
+        run: |
+          pip install mypy
+          cd samantha-ai-assistant/apps/backend
+          mypy .
+
+  build-and-deploy-backend:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Deploy to Railway
+        uses: railwayapp/cli-action@v1
+        with:
+          command: up
+        env:
+          RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
+
+  build-and-deploy-frontend:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Install frontend dependencies
+        run: |
+          cd samantha-ai-assistant/apps/web
+          pnpm install
+      - name: Lint frontend (eslint)
+        run: |
+          cd samantha-ai-assistant/apps/web
+          pnpm lint
+      - name: Type check frontend (tsc)
+        run: |
+          cd samantha-ai-assistant/apps/web
+          pnpm exec tsc --noEmit
+      - name: Build frontend
+        run: |
+          cd samantha-ai-assistant/apps/web
+          pnpm build
+      - name: Deploy to Vercel
+        uses: amondnet/vercel-action@v25
+        with:
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
+          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
+          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
+          working-directory: samantha-ai-assistant/apps/web
