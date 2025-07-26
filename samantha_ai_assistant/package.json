@@ -1,25 +1,49 @@
 {
   "name": "samantha-ai-assistant",
   "version": "1.0.0",
-  "description": "Voice-controlled AI assistant for Mac automation, optimized for resource-constrained M2 Macs.",
-  "main": "index.js",
+  "description": "Samantha AI Voice Assistant - Monorepo",
+  "private": true,
   "scripts": {
-    "build": "tsc --build",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "pnpm run --parallel dev",
+    "build": "pnpm run --recursive build",
+    "lint": "pnpm run --recursive lint",
+    "test": "pnpm run --recursive test",
+    "clean": "pnpm run --recursive clean",
+    "chrome-extension:dev": "pnpm --filter @samantha-ai/chrome-extension dev",
+    "chrome-extension:build": "pnpm --filter @samantha-ai/chrome-extension build",
+    "mcp-server:dev": "pnpm --filter @samantha-ai/mcp-server dev",
+    "mcp-server:build": "pnpm --filter @samantha-ai/mcp-server build",
+    "desktop:dev": "pnpm --filter @samantha-ai/desktop dev",
+    "desktop:build": "pnpm --filter @samantha-ai/desktop build",
+    "packages:build": "pnpm --filter \"./packages/**\" build",
+    "packages:dev": "pnpm --filter \"./packages/**\" dev"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "typescript": "^5",
+    "eslint": "^9",
+    "@typescript-eslint/eslint-plugin": "^6.15.0",
+    "@typescript-eslint/parser": "^6.15.0",
+    "prettier": "^3.1.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.2.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "pnpm": ">=8.0.0"
   },
   "keywords": [
-    "AI",
-    "Voice Assistant",
-    "Mac Automation",
-    "TypeScript",
-    "Monorepo"
+    "voice-assistant",
+    "ai",
+    "chrome-extension",
+    "mcp-server",
+    "desktop-app",
+    "monorepo"
   ],
-  "author": "",
-  "license": "ISC",
-  "private": true,
-  "workspaces": [
-    "packages/*",
-    "apps/*"
-  ],
-  "packageManager": "pnpm@9.0.6"
+  "author": "EmotionAI-Vimukti",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/emotionai-vimukti/samantha-ai-assistant.git"
+  }
 }

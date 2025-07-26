@@ -1,38 +1,35 @@
 {
-  "name": "@samantha-ai-assistant/voice-core",
+  "name": "@samantha-ai/voice-core",
   "version": "1.0.0",
-  "description": "Core voice processing pipeline for Samantha AI Assistant, handling audio capture, transcription, and synthesis.",
-  "type": "module",
+  "description": "Samantha AI Voice Processing Core",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "exports": {
-    ".": {
-      "import": "./dist/index.js",
-      "require": "./dist/index.js",
-      "types": "./dist/index.d.ts"
-    }
-  },
   "scripts": {
-    "build": "npx tsc --project tsconfig.json",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "lint": "eslint src/**/*.ts",
+    "test": "jest"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
-    "@picovoice/pvrecorder-node": "^1.2.8",
-    "@samantha-ai-assistant/ai-engine": "1.0.0",
-    "@samantha-ai-assistant/types": "1.0.0",
-    "events": "^3.0.0",
-    "fft.js": "^4.0.4",
-    "node-lame": "^1.4.0",
+    "@google-cloud/speech": "^6.0.0",
     "node-vad": "^1.1.4",
-    "nodejs-whisper": "^0.2.9",
-    "sound-play": "^1.1.0",
-    "web-audio-api": "^0.2.2"
+    "wav": "^1.0.2"
   },
   "devDependencies": {
-    "@types/events": "^3.0.3",
-    "@types/node": "^24.0.15"
-  }
+    "@types/node": "^20",
+    "typescript": "^5",
+    "eslint": "^9",
+    "@typescript-eslint/eslint-plugin": "^6.15.0",
+    "@typescript-eslint/parser": "^6.15.0",
+    "jest": "^29.7.0",
+    "@types/jest": "^29.5.8"
+  },
+  "keywords": [
+    "voice-processing",
+    "speech-recognition",
+    "audio-processing",
+    "vad"
+  ],
+  "author": "EmotionAI-Vimukti",
+  "license": "MIT"
 }

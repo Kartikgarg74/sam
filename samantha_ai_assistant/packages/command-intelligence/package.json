@@ -1,15 +1,35 @@
 {
-  "name": "@samantha-ai-assistant/command-intelligence",
-  "version": "0.1.0",
+  "name": "@samantha-ai/command-intelligence",
+  "version": "1.0.0",
+  "description": "Samantha AI Command Intelligence & Learning",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc",
     "dev": "tsc --watch",
-    "test": "echo \"No tests yet\""
+    "lint": "eslint src/**/*.ts",
+    "test": "jest"
   },
-  "dependencies": {},
+  "dependencies": {
+    "natural": "^6.10.4",
+    "compromise": "^14.10.0",
+    "@samantha-ai/types": "workspace:*"
+  },
   "devDependencies": {
-    "typescript": "^5.0.0"
-  }
+    "@types/node": "^20",
+    "typescript": "^5",
+    "eslint": "^9",
+    "@typescript-eslint/eslint-plugin": "^6.15.0",
+    "@typescript-eslint/parser": "^6.15.0",
+    "jest": "^29.7.0",
+    "@types/jest": "^29.5.8"
+  },
+  "keywords": [
+    "command-intelligence",
+    "nlp",
+    "pattern-learning",
+    "workflow-automation"
+  ],
+  "author": "EmotionAI-Vimukti",
+  "license": "MIT"
 }

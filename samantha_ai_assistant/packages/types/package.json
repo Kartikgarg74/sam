@@ -1,28 +1,26 @@
 {
-  "name": "@samantha-ai-assistant/types",
+  "name": "@samantha-ai/types",
   "version": "1.0.0",
-  "description": "Shared type definitions for Samantha AI Assistant.",
-  "type": "module",
+  "description": "Samantha AI Shared TypeScript Types",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "exports": {
-    ".": {
-      "import": "./dist/index.js",
-      "require": "./dist/index.js",
-      "types": "./dist/index.d.ts"
-    }
-  },
   "scripts": {
-    "build": "npx tsc --project tsconfig.json",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "nodejs-whisper": "^0.2.9"
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "lint": "eslint src/**/*.ts"
   },
   "devDependencies": {
-    "typescript": "^5.0.0"
-  }
+    "@types/node": "^20",
+    "typescript": "^5",
+    "eslint": "^9",
+    "@typescript-eslint/eslint-plugin": "^6.15.0",
+    "@typescript-eslint/parser": "^6.15.0"
+  },
+  "keywords": [
+    "typescript",
+    "types",
+    "shared-types"
+  ],
+  "author": "EmotionAI-Vimukti",
+  "license": "MIT"
 }
