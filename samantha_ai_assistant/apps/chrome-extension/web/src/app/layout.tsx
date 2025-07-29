@@ -1,34 +1,89 @@
+import type { Metadata } from 'next';
 import './globals.css';
-import Link from 'next/link';
-import VoiceOrb from './components/VoiceOrb';
-import ThemeSwitcher from './ThemeSwitcher';
+import VoiceOrbEnhanced from './components/VoiceOrbEnhanced';
+import ThemeSwitcherEnhanced from './components/ThemeSwitcherEnhanced';
+import NotificationSystem from './components/NotificationSystem';
+import BrowserCompatibilityTest from './components/BrowserCompatibilityTest';
 
-export const metadata = {
-  title: 'Samantha AI Web Management',
-  description: 'Manage, monitor, and configure your Samantha AI assistant',
+export const metadata: Metadata = {
+  title: 'Samantha AI Assistant',
+  description: 'Cross-platform AI assistant with voice recognition and browser automation',
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <meta name="theme-color" content="#6366f1" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        <meta name="apple-mobile-web-app-title" content="Samantha AI" />
+        <meta name="msapplication-TileColor" content="#6366f1" />
+        <meta name="msapplication-config" content="/browserconfig.xml" />
+        <link rel="icon" href="/favicon.ico" />
         <link rel="manifest" href="/manifest.json" />
-        <meta name="theme-color" content="#2563eb" />
-        <link rel="apple-touch-icon" href="/favicon.ico" />
       </head>
-      <body className="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 min-h-screen">
-        <VoiceOrb />
-        <nav className="w-full flex items-center justify-between px-6 py-4 bg-white dark:bg-gray-800 shadow-md">
-          <div className="flex items-center gap-8">
-            <span className="font-bold text-xl tracking-tight">Samantha AI</span>
-            <Link href="/dashboard" className="hover:underline">Dashboard</Link>
-            <Link href="/commands" className="hover:underline">Commands</Link>
-            <Link href="/workflows" className="hover:underline">Workflows</Link>
-            <Link href="/settings" className="hover:underline">Settings</Link>
+      <body className="antialiased">
+        {/* Browser Compatibility Test */}
+        <BrowserCompatibilityTest
+          showWarnings={true}
+          className="fixed top-4 left-4 z-50"
+        />
+
+        {/* Voice Orb */}
+        <VoiceOrbEnhanced
+          position="top-right"
+          size="medium"
+          showStatus={true}
+          showTranscript={true}
+          onStatusChange={(status) => {
+            console.log('Voice orb status:', status);
+          }}
+          onTranscript={(transcript) => {
+            console.log('Voice transcript:', transcript);
+          }}
+        />
+
+        {/* Theme Switcher */}
+        <div className="fixed top-4 left-1/2 transform -translate-x-1/2 z-40">
+          <ThemeSwitcherEnhanced
+            showSystemOption={true}
+            persistTheme={true}
+            onThemeChange={(theme) => {
+              console.log('Theme changed:', theme);
+            }}
+          />
+        </div>
+
+        {/* Notification System */}
+        <NotificationSystem
+          maxNotifications={5}
+          position="top-right"
+          autoDismiss={true}
+          defaultDuration={5000}
+        />
+
+        {/* Main Content */}
+        <main className="min-h-screen bg-background text-foreground">
+          {children}
+        </main>
+
+        {/* Responsive Design Indicators (Development Only) */}
+        {process.env.NODE_ENV === 'development' && (
+          <div className="fixed bottom-4 left-4 z-50 bg-black bg-opacity-75 text-white px-2 py-1 rounded text-xs font-mono">
+            <div className="sm:hidden">XS</div>
+            <div className="hidden sm:block md:hidden">SM</div>
+            <div className="hidden md:block lg:hidden">MD</div>
+            <div className="hidden lg:block xl:hidden">LG</div>
+            <div className="hidden xl:block 2xl:hidden">XL</div>
+            <div className="hidden 2xl:block">2XL</div>
           </div>
-          <ThemeSwitcher />
-        </nav>
-        <main className="max-w-6xl mx-auto px-4 py-8">{children}</main>
+        )}
       </body>
     </html>
   );

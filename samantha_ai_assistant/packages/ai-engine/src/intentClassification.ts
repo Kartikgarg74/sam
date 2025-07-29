@@ -1,5 +1,5 @@
-import { ConversationContext, IntentClassificationResult } from '@samantha-ai-assistant/types';
 import { GoogleGenerativeAI } from '@google/generative-ai';
+import { ConversationContext, IntentClassificationResult } from '@samantha-ai-assistant/types';
 
 // [CONTEXT] Classifies user intent using Gemini 2.5 Flash.
 export class IntentClassification {

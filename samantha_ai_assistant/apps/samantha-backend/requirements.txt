@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+pydantic
+python-dotenv
+google-generativeai
+pydub
+starlette
+# Add other dependencies as needed, e.g., for Whisper, ElevenLabs
+# openai-whisper
+# elevenlabs

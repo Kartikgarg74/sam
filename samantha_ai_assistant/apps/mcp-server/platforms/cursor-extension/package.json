@@ -1,0 +1,196 @@
+{
+  "name": "samantha-ai-cursor",
+  "displayName": "Samantha AI Assistant",
+  "description": "Voice-controlled AI assistant with system automation for Cursor",
+  "version": "1.0.0",
+  "publisher": "samantha-ai",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other",
+    "Voice Control",
+    "AI",
+    "Productivity"
+  ],
+  "activationEvents": [
+    "onCommand:samantha-ai.startVoiceControl",
+    "onCommand:samantha-ai.stopVoiceControl",
+    "onCommand:samantha-ai.executeCommand",
+    "onCommand:samantha-ai.generateCode",
+    "onCommand:samantha-ai.explainCode",
+    "onCommand:samantha-ai.refactorCode",
+    "onWebviewPanel:samantha-ai.dashboard"
+  ],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "samantha-ai.startVoiceControl",
+        "title": "Start Voice Control",
+        "category": "Samantha AI"
+      },
+      {
+        "command": "samantha-ai.stopVoiceControl",
+        "title": "Stop Voice Control",
+        "category": "Samantha AI"
+      },
+      {
+        "command": "samantha-ai.executeCommand",
+        "title": "Execute AI Command",
+        "category": "Samantha AI"
+      },
+      {
+        "command": "samantha-ai.generateCode",
+        "title": "Generate Code",
+        "category": "Samantha AI"
+      },
+      {
+        "command": "samantha-ai.explainCode",
+        "title": "Explain Code",
+        "category": "Samantha AI"
+      },
+      {
+        "command": "samantha-ai.refactorCode",
+        "title": "Refactor Code",
+        "category": "Samantha AI"
+      },
+      {
+        "command": "samantha-ai.openDashboard",
+        "title": "Open Samantha AI Dashboard",
+        "category": "Samantha AI"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "samantha-ai.startVoiceControl",
+        "key": "ctrl+shift+v",
+        "mac": "cmd+shift+v"
+      },
+      {
+        "command": "samantha-ai.stopVoiceControl",
+        "key": "ctrl+shift+x",
+        "mac": "cmd+shift+x"
+      },
+      {
+        "command": "samantha-ai.generateCode",
+        "key": "ctrl+shift+g",
+        "mac": "cmd+shift+g"
+      },
+      {
+        "command": "samantha-ai.explainCode",
+        "key": "ctrl+shift+e",
+        "mac": "cmd+shift+e"
+      }
+    ],
+    "menus": {
+      "commandPalette": [
+        {
+          "command": "samantha-ai.startVoiceControl",
+          "when": "!samantha-ai.isListening"
+        },
+        {
+          "command": "samantha-ai.stopVoiceControl",
+          "when": "samantha-ai.isListening"
+        },
+        {
+          "command": "samantha-ai.generateCode",
+          "when": "editorTextFocus"
+        },
+        {
+          "command": "samantha-ai.explainCode",
+          "when": "editorTextFocus"
+        },
+        {
+          "command": "samantha-ai.refactorCode",
+          "when": "editorTextFocus"
+        }
+      ],
+      "editor/context": [
+        {
+          "command": "samantha-ai.generateCode",
+          "group": "samantha-ai",
+          "when": "editorTextFocus"
+        },
+        {
+          "command": "samantha-ai.explainCode",
+          "group": "samantha-ai",
+          "when": "editorTextFocus"
+        },
+        {
+          "command": "samantha-ai.refactorCode",
+          "group": "samantha-ai",
+          "when": "editorTextFocus"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "Samantha AI",
+      "properties": {
+        "samantha-ai.enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable Samantha AI voice control"
+        },
+        "samantha-ai.language": {
+          "type": "string",
+          "default": "en-US",
+          "enum": ["en-US", "en-GB", "es-ES", "fr-FR", "de-DE", "it-IT", "pt-BR", "ja-JP", "ko-KR", "zh-CN"],
+          "description": "Voice recognition language"
+        },
+        "samantha-ai.autoStart": {
+          "type": "boolean",
+          "default": false,
+          "description": "Automatically start voice control on Cursor launch"
+        },
+        "samantha-ai.mcpServerUrl": {
+          "type": "string",
+          "default": "http://localhost:8000",
+          "description": "MCP Server URL"
+        },
+        "samantha-ai.codeGeneration": {
+          "type": "object",
+          "properties": {
+            "enabled": {
+              "type": "boolean",
+              "default": true,
+              "description": "Enable AI code generation"
+            },
+            "model": {
+              "type": "string",
+              "default": "gpt-4",
+              "description": "AI model for code generation"
+            },
+            "temperature": {
+              "type": "number",
+              "default": 0.3,
+              "description": "Creativity level for code generation"
+            }
+          }
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.85.0",
+    "@types/node": "18.x",
+    "@typescript-eslint/eslint-plugin": "^6.15.0",
+    "@typescript-eslint/parser": "^6.15.0",
+    "eslint": "^8.56.0",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^0.4.0",
+    "axios": "^1.6.0",
+    "ws": "^8.14.0",
+    "openai": "^4.20.0"
+  }
+}

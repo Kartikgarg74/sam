@@ -1,20 +1,6 @@
 'use client';
 import { useWorkflowBuilder, Step, Template } from './useWorkflowBuilder';
 import { useEffect, useState } from 'react';
-import {
-  DndContext,
-  closestCenter,
-  PointerSensor,
-  useSensor,
-  useSensors,
-  DragEndEvent,
-} from '@dnd-kit/core';
-import {
-  SortableContext,
-  useSortable,
-  verticalListSortingStrategy,
-} from '@dnd-kit/sortable';
-import { CSS } from '@dnd-kit/utilities';
 
 interface TestResult {
   step: number;
@@ -23,110 +9,97 @@ interface TestResult {
   result: 'Success' | 'Fail';
 }
 
-interface DraggableStepProps {
-  id: string;
+interface StepProps {
   index: number;
   step: Step;
   onRemove: (index: number) => void;
   onEdit: (index: number, params: Record<string, string | number>) => void;
 }
 
-function DraggableStep({ id, index, step, onRemove, onEdit }: DraggableStepProps) {
-  const { attributes, listeners, setNodeRef, transform, transition, isDragging } = useSortable({ id });
-  const [editing, setEditing] = useState(false);
-  const [params, setParams] = useState<Record<string, string | number>>(step.params || {});
+function SimpleStep({ index, step, onRemove, onEdit }: StepProps) {
+  const [isEditing, setIsEditing] = useState(false);
+  const [params, setParams] = useState(step.params || {});
 
   function handleSave() {
     onEdit(index, params);
-    setEditing(false);
+    setIsEditing(false);
   }
 
   return (
-    <li
-      ref={setNodeRef}
-      style={{ transform: CSS.Transform.toString(transform), transition }}
-      className={`flex flex-col md:flex-row items-start md:items-center gap-2 bg-gray-100 dark:bg-gray-700 rounded px-3 py-2 ${isDragging ? 'opacity-50' : ''}`}
-      {...attributes}
-      {...listeners}
-    >
-      <div className="flex items-center gap-2 w-full">
-        <span className="font-mono cursor-grab">{index + 1}.</span>
-        <span className="flex-1">{step.action}</span>
-        <button
-          className="px-2 py-1 rounded bg-yellow-500 text-white"
-          onClick={() => setEditing(e => !e)}
-        >{editing ? 'Cancel' : 'Edit'}</button>
-        <button
-          className="px-2 py-1 rounded bg-red-600 text-white"
-          onClick={() => onRemove(index)}
-        >Remove</button>
+    <div className="p-3 border rounded bg-gray-50 dark:bg-gray-700">
+      <div className="flex justify-between items-center">
+        <span className="font-medium">Step {index + 1}: {step.action}</span>
+        <div className="flex gap-2">
+          <button
+            onClick={() => setIsEditing(!isEditing)}
+            className="px-2 py-1 text-sm bg-blue-600 text-white rounded"
+          >
+            {isEditing ? 'Cancel' : 'Edit'}
+          </button>
+          <button
+            onClick={() => onRemove(index)}
+            className="px-2 py-1 text-sm bg-red-600 text-white rounded"
+          >
+            Remove
+          </button>
+        </div>
       </div>
-      {editing && (
-        <div className="flex flex-col gap-2 w-full md:w-auto">
-          {step.action === 'openApp' || step.action === 'closeApp' ? (
-            <label>
-              App Name:
-              <input
-                className="ml-2 px-2 py-1 rounded bg-gray-200 dark:bg-gray-800"
-                value={params.app as string || ''}
-                onChange={e => setParams((p) => ({ ...p, app: e.target.value }))}
-              />
-            </label>
-          ) : null}
-          {step.action === 'setVolume' ? (
-            <label>
-              Volume:
-              <input
-                type="number"
-                min={0}
-                max={100}
-                className="ml-2 px-2 py-1 rounded bg-gray-200 dark:bg-gray-800"
-                value={params.value as number || ''}
-                onChange={e => setParams((p) => ({ ...p, value: Number(e.target.value) }))}
-              />
-            </label>
-          ) : null}
-          <button className="px-2 py-1 rounded bg-blue-600 text-white mt-2" onClick={handleSave}>Save</button>
+
+      {isEditing && (
+        <div className="mt-2">
+          <input
+            type="text"
+            value={JSON.stringify(params)}
+            onChange={(e) => setParams(JSON.parse(e.target.value || '{}'))}
+            className="w-full p-2 border rounded"
+            placeholder="Parameters (JSON)"
+          />
+          <button
+            onClick={handleSave}
+            className="mt-2 px-3 py-1 bg-green-600 text-white rounded"
+          >
+            Save
+          </button>
         </div>
       )}
-      {step.params && (
-        <div className="text-xs text-gray-500 mt-1">{JSON.stringify(step.params)}</div>
+
+      {!isEditing && step.params && (
+        <div className="mt-2 text-sm text-gray-600 dark:text-gray-400">
+          Params: {JSON.stringify(step.params)}
+        </div>
       )}
-    </li>
+    </div>
   );
 }
 
 export default function WorkflowsPage() {
   const {
-    availableActions,
     steps,
     addStep,
     removeStep,
-    moveStep,
-    clearWorkflow,
-    importTemplate,
     editStep,
+    clearWorkflow,
+    moveStep,
+    importTemplate,
   } = useWorkflowBuilder();
 
   const [templates, setTemplates] = useState<Template[]>([]);
+
+  const availableActions = [
+    { value: 'navigate', label: 'Navigate' },
+    { value: 'click', label: 'Click' },
+    { value: 'type', label: 'Type' },
+    { value: 'wait', label: 'Wait' },
+    { value: 'screenshot', label: 'Screenshot' },
+  ];
+
   const [testResults, setTestResults] = useState<TestResult[] | null>(null);
+
   useEffect(() => {
     fetch('/api/workflow-templates')
       .then(res => res.json())
       .then(data => setTemplates(data.templates));
   }, []);
-
-  // DnD-kit setup
-  const sensors = useSensors(useSensor(PointerSensor));
-  function handleDragEnd(event: DragEndEvent) {
-    const { active, over } = event;
-    if (!over) return;
-    if (active.id !== over.id) {
-      const oldIndex = steps.findIndex((_, i) => i === Number(active.id));
-      const newIndex = steps.findIndex((_, i) => i === Number(over.id));
-      moveStep(oldIndex, newIndex);
-    }
-  }
 
   function handleTestWorkflow() {
     // Simulate running each step (random success/fail)
@@ -161,15 +134,13 @@ export default function WorkflowsPage() {
             Test Workflow
           </button>
         </div>
-        <DndContext sensors={sensors} collisionDetection={closestCenter} onDragEnd={handleDragEnd}>
-          <SortableContext items={steps.map((_, i) => i.toString())} strategy={verticalListSortingStrategy}>
-            <ul className="space-y-2">
-              {steps.map((step, i) => (
-                <DraggableStep key={i} id={i.toString()} index={i} step={step} onRemove={removeStep} onEdit={editStep} />
-              ))}
-            </ul>
-          </SortableContext>
-        </DndContext>
+
+        <ul className="space-y-2">
+          {steps.map((step, i) => (
+            <SimpleStep key={i} index={i} step={step} onRemove={removeStep} onEdit={editStep} />
+          ))}
+        </ul>
+
         {testResults && (
           <div className="mt-6">
             <h3 className="font-semibold mb-2">Test Results</h3>
@@ -183,10 +154,11 @@ export default function WorkflowsPage() {
           </div>
         )}
       </section>
+
       <section className="p-6 bg-white dark:bg-gray-800 rounded shadow">
         <h2 className="font-semibold mb-2">Template Library</h2>
         <div className="flex gap-4 flex-wrap">
-          {templates.map((tpl, i) => (
+          {templates.map((tpl: Template, i: number) => (
             <button
               key={i}
               className="px-3 py-1 rounded bg-green-600 text-white"
@@ -197,10 +169,12 @@ export default function WorkflowsPage() {
           ))}
         </div>
       </section>
+
       <section className="p-6 bg-white dark:bg-gray-800 rounded shadow">
         <h2 className="font-semibold mb-2">Service Integration</h2>
         <div className="h-16 bg-gray-100 dark:bg-gray-700 rounded flex items-center justify-center">[Service connection/config]</div>
       </section>
+
       <section className="p-6 bg-white dark:bg-gray-800 rounded shadow">
         <h2 className="font-semibold mb-2">Testing & Validation</h2>
         <div className="h-16 bg-gray-100 dark:bg-gray-700 rounded flex items-center justify-center">[Workflow testing tools]</div>

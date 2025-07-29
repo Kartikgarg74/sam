@@ -1,0 +1,47 @@
+{
+  "/api/v1/voice/process-audio": {
+    "method": "POST",
+    "type": "tool",
+    "name": "process_voice_audio"
+  },
+  "/api/v1/voice/generate-response": {
+    "method": "POST",
+    "type": "tool",
+    "name": "generate_voice_response"
+  },
+  "/api/v1/automation/execute": {
+    "method": "POST",
+    "type": "tool",
+    "name": "execute_automation_command"
+  },
+  "/api/v1/monitoring/health": {
+    "method": "GET",
+    "type": "tool",
+    "name": "get_system_health"
+  },
+  "/api/v1/voice/supported-languages": {
+    "method": "GET",
+    "type": "resource",
+    "name": "supported_languages"
+  },
+  "/api/v1/voice/command-patterns": {
+    "method": "GET",
+    "type": "resource",
+    "name": "command_patterns"
+  },
+  "/api/v1/automation/supported-operations": {
+    "method": "GET",
+    "type": "resource",
+    "name": "supported_operations"
+  },
+  "/api/v1/system/info": {
+    "method": "GET",
+    "type": "resource",
+    "name": "system_info"
+  },
+  "/api/v1/automation/status": {
+    "method": "GET",
+    "type": "resource",
+    "name": "automation_status"
+  }
+}

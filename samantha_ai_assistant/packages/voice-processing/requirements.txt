@@ -1,0 +1,15 @@
+# For Whisper (offline or HuggingFace Transformers)
+# If using HuggingFace Transformers:
+# transformers
+# accelerate
+# torch # or tensorflow or jax
+
+# If using ElevenLabs (uncomment and specify version if using their official library)
+elevenlabs
+
+# For audio processing (e.g., if handling audio files directly)
+# pydub
+# soundfile
+
+# For local Whisper C++ bindings (example, if using whisper-cpp-python)
+# whisper-cpp-python

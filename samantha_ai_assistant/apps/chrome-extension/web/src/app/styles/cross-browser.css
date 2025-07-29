@@ -1,0 +1,62 @@
+/* Cross-browser compatibility styles for Samantha AI Extension */
+
+/* Reset and base styles */
+* {
+  box-sizing: border-box;
+}
+
+/* Chrome/Edge specific styles */
+@supports (-webkit-appearance: none) {
+  .voice-orb {
+    -webkit-appearance: none;
+  }
+}
+
+/* Firefox specific styles */
+@supports (-moz-appearance: none) {
+  .voice-orb {
+    -moz-appearance: none;
+  }
+}
+
+/* Safari specific styles */
+@supports (-webkit-transform: translateZ(0)) {
+  .voice-orb {
+    -webkit-transform: translateZ(0);
+  }
+}
+
+/* Cross-browser animations */
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+@-webkit-keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .extension-popup {
+    width: 100vw;
+    height: 100vh;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: #1a1a1a;
+    --text-color: #ffffff;
+  }
+}
+
+/* Light mode support */
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+  }
+}

@@ -1,106 +1,92 @@
 'use client';
-import React, { useState, useRef } from 'react';
 
-const STATUS = {
-  idle: 'Idle',
-  listening: 'Listening',
-  processing: 'Processing',
-  speaking: 'Speaking',
-  error: 'Error',
-};
+import { useState, useEffect } from 'react';
 
-type OrbStatus = 'Idle' | 'Listening' | 'Processing' | 'Speaking' | 'Error';
+interface VoiceOrbProps {
+  isListening: boolean;
+  onToggle: () => void;
+}
 
-type SpeechRecognitionResult = {
-  transcript: string;
-};
-type SpeechRecognitionEvent = {
-  results: { [index: number]: { [index: number]: SpeechRecognitionResult } };
-};
+export function VoiceOrb({ isListening, onToggle }: VoiceOrbProps) {
+  const [isHovered, setIsHovered] = useState(false);
+  const [pulseAnimation, setPulseAnimation] = useState(false);
 
-type RecognitionType = {
-  lang?: string;
-  interimResults?: boolean;
-  maxAlternatives?: number;
-  onresult?: ((event: SpeechRecognitionEvent) => void) | null;
-  onerror?: (() => void) | null;
-  onend?: (() => void) | null;
-  start: () => void;
-};
-
-export default function VoiceOrb() {
-  const [status, setStatus] = useState<OrbStatus>('Idle');
-  const [transcript, setTranscript] = useState('');
-  const [isListening, setIsListening] = useState(false);
-  const recognitionRef = useRef<RecognitionType | null>(null);
-
-  // Start browser voice recognition (Web Speech API)
-  const startListening = () => {
-    if (!('webkitSpeechRecognition' in window)) {
-      setStatus('Error');
-      return;
+  useEffect(() => {
+    if (isListening) {
+      setPulseAnimation(true);
+    } else {
+      setPulseAnimation(false);
     }
-    setStatus('Listening');
-    setIsListening(true);
-    const RecognitionClass = (window as typeof window & { webkitSpeechRecognition: { new (): RecognitionType } }).webkitSpeechRecognition;
-    const recognition = new RecognitionClass() as RecognitionType;
-    recognition.lang = 'en-US';
-    recognition.interimResults = false;
-    recognition.maxAlternatives = 1;
-    recognition.onresult = (event: SpeechRecognitionEvent) => {
-      const text = event.results[0][0].transcript;
-      setTranscript(text);
-      setStatus('Processing');
-      setIsListening(false);
-      // TODO: Send to backend for intent/automation, then TTS
-      // Placeholder: simulate TTS with ElevenLabs
-      setTimeout(() => setStatus('Speaking'), 1000);
-      setTimeout(() => setStatus('Idle'), 3000);
-    };
-    recognition.onerror = () => {
-      setStatus('Error');
-      setIsListening(false);
-    };
-    recognition.onend = () => {
-      if (isListening) setStatus('Idle');
-      setIsListening(false);
-    };
-    recognitionRef.current = recognition;
-    recognition.start();
-  };
-
-  // Orb color based on status
-  const orbColor = {
-    Idle: 'bg-gradient-to-br from-purple-500 to-indigo-600',
-    Listening: 'bg-gradient-to-br from-green-400 to-blue-500 animate-pulse',
-    Processing: 'bg-gradient-to-br from-yellow-400 to-orange-500 animate-pulse',
-    Speaking: 'bg-gradient-to-br from-blue-400 to-purple-600 animate-pulse',
-    Error: 'bg-gradient-to-br from-red-500 to-pink-600 animate-pulse',
-  }[status];
+  }, [isListening]);
 
   return (
-    <div className="fixed top-6 right-6 z-50 flex flex-col items-center">
+    <div className="flex flex-col items-center space-y-6">
+      {/* Voice Orb */}
       <div
-        className={`w-20 h-20 rounded-full shadow-lg flex items-center justify-center transition-all duration-300 ${orbColor}`}
-        style={{ boxShadow: status !== 'Idle' ? '0 0 32px 8px rgba(99,102,241,0.5)' : undefined }}
+        className={`
+          relative w-32 h-32 rounded-full cursor-pointer transition-all duration-300 ease-in-out
+          ${isListening
+            ? 'bg-gradient-to-r from-red-400 to-pink-500 shadow-lg shadow-red-500/50'
+            : 'bg-gradient-to-r from-blue-400 to-purple-500 hover:from-blue-500 hover:to-purple-600'
+          }
+          ${pulseAnimation ? 'animate-pulse' : ''}
+          ${isHovered ? 'scale-105' : 'scale-100'}
+        `}
+        onClick={onToggle}
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
       >
+        {/* Inner Circle */}
+        <div className="absolute inset-4 bg-white/20 rounded-full flex items-center justify-center">
+          <div className="text-white text-4xl">
+            {isListening ? '🎤' : '🎙️'}
+          </div>
+        </div>
+
+        {/* Pulse Rings */}
+        {isListening && (
+          <>
+            <div className="absolute inset-0 rounded-full border-2 border-white/30 animate-ping"></div>
+            <div className="absolute inset-2 rounded-full border-2 border-white/20 animate-ping animation-delay-300"></div>
+          </>
+        )}
+      </div>
+
+      {/* Status Text */}
+      <div className="text-center">
+        <p className={`text-lg font-semibold ${isListening ? 'text-red-600' : 'text-gray-700 dark:text-gray-300'}`}>
+          {isListening ? 'Listening...' : 'Click to Start'}
+        </p>
+        <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">
+          {isListening ? 'Speak your command' : 'Voice control ready'}
+        </p>
+      </div>
+
+      {/* Quick Actions */}
+      <div className="flex space-x-4">
         <button
-          className="w-12 h-12 rounded-full bg-white bg-opacity-80 flex items-center justify-center shadow-md hover:scale-110 transition"
-          onClick={startListening}
-          aria-label="Activate voice input"
-          disabled={isListening}
+          className={`
+            px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200
+            ${isListening
+              ? 'bg-red-100 text-red-700 hover:bg-red-200'
+              : 'bg-blue-100 text-blue-700 hover:bg-blue-200 dark:bg-blue-900 dark:text-blue-300'
+            }
+          `}
+          onClick={onToggle}
         >
-          <svg width="28" height="28" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="text-indigo-600">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18v2m0 0c-3.314 0-6-2.686-6-6m6 6c3.314 0 6-2.686 6-6m-6 6v-2m0-6a2 2 0 100-4 2 2 0 000 4zm0 0v4" />
-          </svg>
+          {isListening ? 'Stop' : 'Start'}
+        </button>
+
+        <button
+          className="px-4 py-2 rounded-lg text-sm font-medium bg-gray-100 text-gray-700 hover:bg-gray-200 dark:bg-gray-700 dark:text-gray-300 transition-all duration-200"
+          onClick={() => {
+            // Clear command history
+            chrome.runtime.sendMessage({ action: 'clearHistory' });
+          }}
+        >
+          Clear
         </button>
       </div>
-      <div className="mt-2 text-xs text-gray-700 font-semibold bg-white bg-opacity-80 px-2 py-1 rounded shadow">
-        {status}
-      </div>
-      {transcript && (
-        <div className="mt-1 text-xs text-gray-500 max-w-xs truncate">{transcript}</div>
-      )}
     </div>
   );
 }

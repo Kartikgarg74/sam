@@ -1,0 +1,400 @@
+server:
+  name: "samantha-ai-voice-assistant"
+  version: "1.0.0"
+  description: "Voice-controlled AI assistant with system automation"
+
+tools:
+  - name: "process_voice_audio"
+    description: "Process voice audio and return structured command"
+    input_schema:
+      type: "object"
+      properties:
+        audio_data:
+          type: "string"
+          format: "binary"
+          description: "Base64 encoded audio data"
+        language:
+          type: "string"
+          default: "en-US"
+          description: "Language code for speech recognition"
+        user_id:
+          type: "string"
+          description: "Optional user identifier"
+    output_schema:
+      type: "object"
+      properties:
+        success:
+          type: "boolean"
+        command:
+          type: "object"
+          properties:
+            id: { type: "string" }
+            original_text: { type: "string" }
+            intent: { type: "string" }
+            confidence: { type: "number" }
+            entities: { type: "object" }
+            timestamp: { type: "string" }
+
+  - name: "generate_voice_response"
+    description: "Generate voice response for a processed command"
+    input_schema:
+      type: "object"
+      properties:
+        command_data:
+          type: "object"
+          description: "Processed command data"
+    output_schema:
+      type: "object"
+      properties:
+        success:
+          type: "boolean"
+        response:
+          type: "object"
+          properties:
+            text: { type: "string" }
+            audio_format: { type: "string" }
+            duration: { type: "number" }
+            has_audio: { type: "boolean" }
+
+  - name: "execute_automation_command"
+    description: "Execute system automation command"
+    input_schema:
+      type: "object"
+      properties:
+        command:
+          type: "string"
+          description: "Automation command to execute"
+        params:
+          type: "object"
+          description: "Command parameters"
+    output_schema:
+      type: "object"
+      properties:
+        success:
+          type: "boolean"
+        message:
+          type: "string"
+        data:
+          type: "object"
+        error:
+          type: "string"
+        execution_time:
+          type: "number"
+
+  - name: "get_system_health"
+    description: "Get system health status"
+    input_schema:
+      type: "object"
+      properties: {}
+    output_schema:
+      type: "object"
+      properties:
+        status:
+          type: "string"
+        components:
+          type: "object"
+        timestamp:
+          type: "string"
+
+  - name: "speech_to_text"
+    description: "Convert speech to text using OpenAI Whisper"
+    input_schema:
+      type: "object"
+      properties:
+        audio_data:
+          type: "string"
+          format: "binary"
+          description: "Base64 encoded audio data"
+        language:
+          type: "string"
+          default: "en-US"
+          description: "Language code"
+    output_schema:
+      type: "object"
+      properties:
+        success:
+          type: "boolean"
+        text:
+          type: "string"
+        intent:
+          type: "string"
+        confidence:
+          type: "number"
+        entities:
+          type: "object"
+
+  - name: "text_to_speech"
+    description: "Convert text to speech using ElevenLabs"
+    input_schema:
+      type: "object"
+      properties:
+        text:
+          type: "string"
+          description: "Text to convert to speech"
+        voice:
+          type: "string"
+          default: "alloy"
+          description: "Voice model to use"
+    output_schema:
+      type: "object"
+      properties:
+        success:
+          type: "boolean"
+        audio_data:
+          type: "string"
+          format: "binary"
+        duration:
+          type: "number"
+        text:
+          type: "string"
+
+  - name: "intent_classification"
+    description: "Classify user intent from text"
+    input_schema:
+      type: "object"
+      properties:
+        text:
+          type: "string"
+          description: "Text to classify"
+    output_schema:
+      type: "object"
+      properties:
+        success:
+          type: "boolean"
+        intent:
+          type: "string"
+        confidence:
+          type: "number"
+        entities:
+          type: "object"
+        text:
+          type: "string"
+
+  - name: "file_operation"
+    description: "Execute file system operations"
+    input_schema:
+      type: "object"
+      properties:
+        operation:
+          type: "string"
+          description: "File operation to perform"
+        params:
+          type: "object"
+          description: "Operation parameters"
+    output_schema:
+      type: "object"
+      properties:
+        success:
+          type: "boolean"
+        message:
+          type: "string"
+        data:
+          type: "object"
+        error:
+          type: "string"
+        execution_time:
+          type: "number"
+
+  - name: "app_control"
+    description: "Control applications"
+    input_schema:
+      type: "object"
+      properties:
+        action:
+          type: "string"
+          description: "Action to perform (launch, close, focus)"
+        app_name:
+          type: "string"
+          description: "Application name"
+    output_schema:
+      type: "object"
+      properties:
+        success:
+          type: "boolean"
+        message:
+          type: "string"
+        data:
+          type: "object"
+        error:
+          type: "string"
+        execution_time:
+          type: "number"
+
+  - name: "system_control"
+    description: "Control system settings"
+    input_schema:
+      type: "object"
+      properties:
+        action:
+          type: "string"
+          description: "System action to perform"
+        params:
+          type: "object"
+          description: "Action parameters"
+    output_schema:
+      type: "object"
+      properties:
+        success:
+          type: "boolean"
+        message:
+          type: "string"
+        data:
+          type: "object"
+        error:
+          type: "string"
+        execution_time:
+          type: "number"
+
+  - name: "browser_automation"
+    description: "Automate browser operations"
+    input_schema:
+      type: "object"
+      properties:
+        browser:
+          type: "string"
+          description: "Browser name (chrome, firefox, safari)"
+        action:
+          type: "string"
+          description: "Browser action to perform"
+        params:
+          type: "object"
+          description: "Action parameters"
+    output_schema:
+      type: "object"
+      properties:
+        success:
+          type: "boolean"
+        message:
+          type: "string"
+        data:
+          type: "object"
+        error:
+          type: "string"
+        execution_time:
+          type: "number"
+
+resources:
+  - name: "supported_languages"
+    description: "Get supported voice languages"
+    schema:
+      type: "object"
+      properties:
+        languages:
+          type: "object"
+          description: "Language codes and names"
+        count:
+          type: "number"
+          description: "Number of supported languages"
+
+  - name: "command_patterns"
+    description: "Get command patterns for intent recognition"
+    schema:
+      type: "object"
+      properties:
+        patterns:
+          type: "object"
+          description: "Command patterns by category"
+        categories:
+          type: "array"
+          items:
+            type: "string"
+          description: "Available pattern categories"
+
+  - name: "voice_settings"
+    description: "Get current voice settings"
+    schema:
+      type: "object"
+      properties:
+        default_language:
+          type: "string"
+        voice_model:
+          type: "string"
+        speech_rate:
+          type: "number"
+        volume:
+          type: "number"
+        supported_voices:
+          type: "array"
+          items:
+            type: "string"
+
+  - name: "supported_operations"
+    description: "Get supported automation operations"
+    schema:
+      type: "object"
+      properties:
+        operations:
+          type: "object"
+          description: "Available operations by category"
+        os_type:
+          type: "string"
+          description: "Operating system type"
+
+  - name: "system_info"
+    description: "Get system information"
+    schema:
+      type: "object"
+      properties:
+        os_type:
+          type: "string"
+        supported_browsers:
+          type: "array"
+          items:
+            type: "string"
+        system_apps:
+          type: "object"
+        timestamp:
+          type: "string"
+
+  - name: "automation_status"
+    description: "Get automation system status"
+    schema:
+      type: "object"
+      properties:
+        status:
+          type: "string"
+        available_operations:
+          type: "number"
+        last_error:
+          type: "string"
+        uptime:
+          type: "string"
+        timestamp:
+          type: "string"
+
+api_endpoints:
+  - path: "/api/v1/voice/process-audio"
+    method: "POST"
+    tool_name: "process_voice_audio"
+
+  - path: "/api/v1/voice/generate-response"
+    method: "POST"
+    tool_name: "generate_voice_response"
+
+  - path: "/api/v1/automation/execute"
+    method: "POST"
+    tool_name: "execute_automation_command"
+
+  - path: "/api/v1/monitoring/health"
+    method: "GET"
+    tool_name: "get_system_health"
+
+  - path: "/api/v1/voice/supported-languages"
+    method: "GET"
+    resource_name: "supported_languages"
+
+  - path: "/api/v1/voice/command-patterns"
+    method: "GET"
+    resource_name: "command_patterns"
+
+  - path: "/api/v1/automation/supported-operations"
+    method: "GET"
+    resource_name: "supported_operations"
+
+  - path: "/api/v1/system/info"
+    method: "GET"
+    resource_name: "system_info"
+
+  - path: "/api/v1/automation/status"
+    method: "GET"
+    resource_name: "automation_status"

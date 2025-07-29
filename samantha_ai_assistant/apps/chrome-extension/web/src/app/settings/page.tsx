@@ -1,5 +1,6 @@
 'use client';
 import { useEffect, useState } from 'react';
+// import { analytics } from '../../utils/analytics';
 
 interface VoiceSettings {
   recognition: 'Whisper' | 'Gemini';
@@ -29,6 +30,8 @@ export default function SettingsPage() {
   const [settings, setSettings] = useState<Settings | null>(null);
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
+  const [analyticsConsent, setAnalyticsConsent] = useState<boolean>(false);
+  const [analyticsEnabled, setAnalyticsEnabled] = useState<boolean>(false);
 
   useEffect(() => {
     fetch('/api/settings')
@@ -55,6 +58,18 @@ export default function SettingsPage() {
     });
     setSaving(false);
   }
+
+  const handleConsentChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const consent = e.target.checked;
+    setAnalyticsConsent(consent);
+    // analytics.setConsent(consent);
+  };
+
+  const handleEnabledChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const enabled = e.target.checked;
+    setAnalyticsEnabled(enabled);
+    // analytics.setEnabled(enabled);
+  };
 
   if (loading || !settings) return <div>Loading settings...</div>;
 
@@ -176,6 +191,37 @@ export default function SettingsPage() {
                 onChange={e => handleChange('security', 'accessControl', e.target.checked)}
               />
             </label>
+          </div>
+        </section>
+        <section className="mt-8">
+          <h2 className="text-lg font-semibold mb-2">Analytics & Privacy</h2>
+          <div className="flex items-center mb-2">
+            <input
+              type="checkbox"
+              id="analytics-consent"
+              checked={analyticsConsent}
+              onChange={handleConsentChange}
+              className="mr-2"
+            />
+            <label htmlFor="analytics-consent" className="text-sm">
+              I consent to anonymous analytics collection to improve the extension (no personal data is collected).
+            </label>
+          </div>
+          <div className="flex items-center mb-2">
+            <input
+              type="checkbox"
+              id="analytics-enabled"
+              checked={analyticsEnabled}
+              onChange={handleEnabledChange}
+              className="mr-2"
+              disabled={!analyticsConsent}
+            />
+            <label htmlFor="analytics-enabled" className="text-sm">
+              Enable analytics (can be disabled at any time)
+            </label>
+          </div>
+          <div className="text-xs text-gray-500">
+            Analytics Status: <span className={analyticsConsent && analyticsEnabled ? 'text-green-600' : 'text-red-600'}>{analyticsConsent && analyticsEnabled ? 'Enabled' : 'Disabled'}</span>
           </div>
         </section>
         <button
