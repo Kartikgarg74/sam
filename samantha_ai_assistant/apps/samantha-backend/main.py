@@ -3,18 +3,20 @@ import sys
 from dotenv import load_dotenv
 
 # Add the project root to the Python path to enable absolute imports
-project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
+project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', '..'))
 if project_root not in sys.path:
     sys.path.insert(0, project_root)
+logging.info(f"Project root added to sys.path: {project_root}")
+logging.info(f"Current sys.path: {sys.path}")
 
 # Load environment variables from .env file
 load_dotenv()
+import os
 import logging
 from fastapi import FastAPI, HTTPException, Request
 from fastapi.responses import JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
-import os
 
 from gemini_service import GeminiService
 from security_middleware import SecurityMiddleware, set_safe_mode
