@@ -4,7 +4,7 @@ FROM node:18-alpine as frontend-builder
 
 WORKDIR /app/samantha_ai_assistant/apps/samantha-web
 COPY samantha_ai_assistant/apps/samantha-web/package.json /app/samantha_ai_assistant/apps/samantha-web/package.json
-COPY pnpm-lock.yaml /app/samantha_ai_assistant/apps/samantha-web/pnpm-lock.yaml
+
 
 RUN npm install -g pnpm && pnpm install --prod
 COPY samantha_ai_assistant/apps/samantha-web/ .
