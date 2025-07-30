@@ -1,0 +1,14 @@
+node_modules/
+.git/
+.gitignore
+.env
+.env.railway
+.mypy_cache/
+.pytest_cache/
+.qodo/
+venv/
+*.log
+*.md
+*.js
+flake8_report.txt
+pytest.ini
