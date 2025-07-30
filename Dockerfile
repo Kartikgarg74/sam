@@ -2,10 +2,10 @@
 FROM node:18-alpine as frontend-builder
 WORKDIR /app/samantha_ai_assistant/apps/samantha-web
 COPY samantha_ai_assistant/apps/samantha-web/package.json .
-COPY samantha_ai_assistant/apps/samantha-web/package-lock.json .
-RUN npm install --omit=dev
+COPY pnpm-lock.yaml .
+RUN npm install -g pnpm && pnpm install --prod
 COPY samantha_ai_assistant/apps/samantha-web/ .
-RUN npm run build
+RUN pnpm run build
 
 # Stage 2: Build the backend
 FROM python:3.9-slim-buster as backend-builder
