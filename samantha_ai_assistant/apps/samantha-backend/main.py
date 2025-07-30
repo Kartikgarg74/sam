@@ -10,9 +10,9 @@ logging.info(f"Project root added to sys.path: {project_root}")
 logging.info(f"Current sys.path: {sys.path}")
 
 # Load environment variables from .env file
+import logging
 load_dotenv()
 import os
-import logging
 from fastapi import FastAPI, HTTPException, Request
 from fastapi.responses import JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
