@@ -6,7 +6,19 @@ WORKDIR /app/samantha_ai_assistant/apps/samantha-web
 COPY samantha_ai_assistant/apps/samantha-web/package.json /app/samantha_ai_assistant/apps/samantha-web/package.json
 
 
-RUN npm install -g pnpm && pnpm install --prod
+RUN set -eux; \
+    npm install -g pnpm; \
+    ATTEMPTS=0; \
+    MAX_ATTEMPTS=5; \
+    while ! pnpm install --prod && [ $ATTEMPTS -lt $MAX_ATTEMPTS ]; do \
+        ATTEMPTS=$((ATTEMPTS+1)); \
+        echo "pnpm install failed. Retrying in 5 seconds... (Attempt $ATTEMPTS/$MAX_ATTEMPTS)"; \
+        sleep 5; \
+    done; \
+    if [ $ATTEMPTS -eq $MAX_ATTEMPTS ]; then \
+        echo "pnpm install failed after $MAX_ATTEMPTS attempts."; \
+        exit 1; \
+    fi
 COPY samantha_ai_assistant/apps/samantha-web/ .
 
 RUN pnpm run build
@@ -15,7 +27,18 @@ RUN pnpm run build
 FROM python:3.11-slim-bullseye as backend-builder
 WORKDIR /app/samantha_ai_assistant/apps/samantha-backend
 COPY samantha_ai_assistant/apps/samantha-backend/requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
+RUN set -eux; \
+    ATTEMPTS=0; \
+    MAX_ATTEMPTS=5; \
+    while ! pip install --no-cache-dir -r requirements.txt && [ $ATTEMPTS -lt $MAX_ATTEMPTS ]; do \
+        ATTEMPTS=$((ATTEMPTS+1)); \
+        echo "pip install failed. Retrying in 5 seconds... (Attempt $ATTEMPTS/$MAX_ATTEMPTS)"; \
+        sleep 5; \
+    done; \
+    if [ $ATTEMPTS -eq $MAX_ATTEMPTS ]; then \
+        echo "pip install failed after $MAX_ATTEMPTS attempts."; \
+        exit 1; \
+    fi
 COPY samantha_ai_assistant/apps/samantha-backend/ .
 
 # Stage 3: Final image
@@ -23,7 +46,10 @@ FROM python:3.11-slim-bullseye
 WORKDIR /app
 
 # Install supervisor, serve, gunicorn, and uvicorn for production
-RUN DEBIAN_FRONTEND=noninteractive apt-get update && apt-get install -y supervisor && \
+RUN echo "deb http://deb.debian.org/debian bullseye main" > /etc/apt/sources.list && \
+    echo "deb http://deb.debian.org/debian bullseye-updates main" >> /etc/apt/sources.list && \
+    echo "deb http://security.debian.org/debian-security bullseye-security main" >> /etc/apt/sources.list && \
+    DEBIAN_FRONTEND=noninteractive timeout 300 apt-get update && apt-get install -y supervisor && \
     apt-get clean && rm -rf /var/lib/apt/lists/* && \
     pip install --no-cache-dir serve gunicorn uvicorn
 
