@@ -10,9 +10,9 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 import os
 
-from .gemini_service import GeminiService
-from .security_middleware import SecurityMiddleware, set_safe_mode
-from .memory_system import MemorySystem
+from gemini_service import GeminiService
+from security_middleware import SecurityMiddleware, set_safe_mode
+from memory_system import MemorySystem
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
