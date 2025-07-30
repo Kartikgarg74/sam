@@ -1,5 +1,11 @@
 import os
+import sys
 from dotenv import load_dotenv
+
+# Add the project root to the Python path to enable absolute imports
+project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
+if project_root not in sys.path:
+    sys.path.insert(0, project_root)
 
 # Load environment variables from .env file
 load_dotenv()
@@ -49,8 +55,8 @@ memory_system = MemorySystem()
 # command_executor = CommandExecutor()
 
 # Placeholder for voice processing (Whisper and ElevenLabs)
-from packages.voice_processing.transcription_service import TranscriptionService
-from packages.voice_processing.text_to_speech_service import TextToSpeechService
+from samantha_ai_assistant.packages.voice_processing.transcription_service import TranscriptionService
+from samantha_ai_assistant.packages.voice_processing.text_to_speech_service import TextToSpeechService
 # transcription_service = TranscriptionService()
 text_to_speech_service = TextToSpeechService(api_key=os.getenv("ELEVENLABS_API_KEY"))
 
