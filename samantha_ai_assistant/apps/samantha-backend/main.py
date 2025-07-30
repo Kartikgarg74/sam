@@ -1,5 +1,6 @@
 import os
 import sys
+import logging
 from dotenv import load_dotenv
 
 # Add the project root to the Python path to enable absolute imports
@@ -10,7 +11,6 @@ logging.info(f"Project root added to sys.path: {project_root}")
 logging.info(f"Current sys.path: {sys.path}")
 
 # Load environment variables from .env file
-import logging
 load_dotenv()
 import os
 from fastapi import FastAPI, HTTPException, Request
