@@ -49,8 +49,8 @@ memory_system = MemorySystem()
 # command_executor = CommandExecutor()
 
 # Placeholder for voice processing (Whisper and ElevenLabs)
-from samantha_ai_assistant.packages.voice_processing.transcription_service import TranscriptionService
-from samantha_ai_assistant.packages.voice_processing.text_to_speech_service import TextToSpeechService
+from packages.voice_processing.transcription_service import TranscriptionService
+from packages.voice_processing.text_to_speech_service import TextToSpeechService
 # transcription_service = TranscriptionService()
 text_to_speech_service = TextToSpeechService(api_key=os.getenv("ELEVENLABS_API_KEY"))
 
