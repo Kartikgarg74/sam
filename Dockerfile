@@ -12,18 +12,19 @@ COPY samantha_ai_assistant/apps/samantha-web/ .
 RUN pnpm run build
 
 # Stage 2: Build the backend
-FROM python:3.9-slim-buster as backend-builder
+FROM python:3.11-slim-bullseye as backend-builder
 WORKDIR /app/samantha_ai_assistant/apps/samantha-backend
 COPY samantha_ai_assistant/apps/samantha-backend/requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 COPY samantha_ai_assistant/apps/samantha-backend/ .
 
 # Stage 3: Final image
-FROM python:3.9-slim-buster
+FROM python:3.11-slim-bullseye
 WORKDIR /app
 
 # Install supervisor, serve, gunicorn, and uvicorn for production
-RUN apt-get update && apt-get install -y supervisor && \
+RUN DEBIAN_FRONTEND=noninteractive apt-get update && apt-get install -y supervisor && \
+    apt-get clean && rm -rf /var/lib/apt/lists/* && \
     pip install --no-cache-dir serve gunicorn uvicorn
 
 # Copy built frontend from frontend-builder stage
