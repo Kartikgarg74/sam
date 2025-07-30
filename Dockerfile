@@ -21,7 +21,18 @@ RUN set -eux; \
     fi
 COPY samantha_ai_assistant/apps/samantha-web/ .
 
-RUN pnpm run build
+RUN set -eux; \
+    ATTEMPTS=0; \
+    MAX_ATTEMPTS=5; \
+    while ! pnpm run build && [ $ATTEMPTS -lt $MAX_ATTEMPTS ]; do \
+        ATTEMPTS=$((ATTEMPTS+1)); \
+        echo "pnpm run build failed. Retrying in 5 seconds... (Attempt $ATTEMPTS/$MAX_ATTEMPTS)"; \
+        sleep 5; \
+    done; \
+    if [ $ATTEMPTS -eq $MAX_ATTEMPTS ]; then \
+        echo "pnpm run build failed after $MAX_ATTEMPTS attempts."; \
+        exit 1; \
+    fi
 
 # Stage 2: Build the backend
 FROM python:3.11-slim-bullseye as backend-builder
@@ -46,10 +57,22 @@ FROM python:3.11-slim-bullseye
 WORKDIR /app
 
 # Install supervisor, serve, gunicorn, and uvicorn for production
-RUN echo "deb http://deb.debian.org/debian bullseye main" > /etc/apt/sources.list && \
-    echo "deb http://deb.debian.org/debian bullseye-updates main" >> /etc/apt/sources.list && \
-    echo "deb http://security.debian.org/debian-security bullseye-security main" >> /etc/apt/sources.list && \
-    DEBIAN_FRONTEND=noninteractive timeout 300 apt-get update && apt-get install -y supervisor && \
+RUN set -eux; \
+    echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list && \
+    echo "deb https://deb.debian.org/debian bullseye-updates main" >> /etc/apt/sources.list && \
+    echo "deb https://security.debian.org/debian-security bullseye-security main" >> /etc/apt/sources.list && \
+    ATTEMPTS=0; \
+    MAX_ATTEMPTS=5; \
+    while ! DEBIAN_FRONTEND=noninteractive timeout 300 apt-get update && [ $ATTEMPTS -lt $MAX_ATTEMPTS ]; do \
+        ATTEMPTS=$((ATTEMPTS+1)); \
+        echo "apt-get update failed. Retrying in 5 seconds... (Attempt $ATTEMPTS/$MAX_ATTEMPTS)"; \
+        sleep 5; \
+    done; \
+    if [ $ATTEMPTS -eq $MAX_ATTEMPTS ]; then \
+        echo "apt-get update failed after $MAX_ATTEMPTS attempts."; \
+        exit 1; \
+    fi; \
+    apt-get install -y supervisor && \
     apt-get clean && rm -rf /var/lib/apt/lists/* && \
     pip install --no-cache-dir serve gunicorn uvicorn
 
