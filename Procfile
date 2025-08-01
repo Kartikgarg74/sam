@@ -1,2 +1,2 @@
 web: cd samantha_ai_assistant/apps/samantha-web && npm run build && npx serve -s build -l $PORT
-api: PYTHONPATH=/app/samantha_ai_assistant:$PYTHONPATH cd samantha_ai_assistant/apps/samantha-backend && gunicorn main:app --workers 1 --worker-class uvicorn.workers.UvicornWorker --bind 0.0.0.0:8000
+api: PYTHONPATH=/app:$PYTHONPATH gunicorn samantha_ai_assistant.apps.samantha-backend.main:app --workers 1 --worker-class uvicorn.workers.UvicornWorker --bind 0.0.0.0:8000
