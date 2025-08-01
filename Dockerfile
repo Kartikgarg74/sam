@@ -59,20 +59,10 @@ WORKDIR /app
 
 # Install supervisor, serve, gunicorn, and uvicorn for production
 RUN set -eux; \
-    apt-get update && apt-get install -y apt-transport-https ca-certificates && \
-
-    ATTEMPTS=0; \
-    MAX_ATTEMPTS=5; \
-    while ! DEBIAN_FRONTEND=noninteractive timeout 300 apt-get update && [ $ATTEMPTS -lt $MAX_ATTEMPTS ]; do \
-        ATTEMPTS=$((ATTEMPTS+1)); \
-        echo "apt-get update failed. Retrying in 5 seconds... (Attempt $ATTEMPTS/$MAX_ATTEMPTS)"; \
-        sleep 5; \
-    done; \
-    if [ $ATTEMPTS -eq $MAX_ATTEMPTS ]; then \
-        echo "apt-get update failed after $MAX_ATTEMPTS attempts."; \
-        exit 1; \
-    fi; \
-    apt-get install -y supervisor && \
+    apt-get clean && \
+    apt-get update
+RUN set -eux; \
+    apt-get install -y apt-transport-https ca-certificates supervisor && \
     apt-get clean && rm -rf /var/lib/apt/lists/* && \
     pip install --no-cache-dir serve gunicorn uvicorn
 
