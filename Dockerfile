@@ -18,7 +18,8 @@ RUN set -eux; \
     if [ $ATTEMPTS -eq $MAX_ATTEMPTS ]; then \
         echo "pnpm install failed after $MAX_ATTEMPTS attempts."; \
         exit 1; \
-    fi
+    fi; \
+    pnpm store prune
 COPY samantha_ai_assistant/apps/samantha-web/ .
 
 RUN set -eux; \
@@ -59,9 +60,7 @@ WORKDIR /app
 # Install supervisor, serve, gunicorn, and uvicorn for production
 RUN set -eux; \
     apt-get update && apt-get install -y apt-transport-https ca-certificates && \
-    echo "deb https://deb.debian.org/debian bullseye main" > /etc/apt/sources.list && \
-    echo "deb https://deb.debian.org/debian bullseye-updates main" >> /etc/apt/sources.list && \
-    echo "deb https://security.debian.org/debian-security bullseye-security main" >> /etc/apt/sources.list && \
+
     ATTEMPTS=0; \
     MAX_ATTEMPTS=5; \
     while ! DEBIAN_FRONTEND=noninteractive timeout 300 apt-get update && [ $ATTEMPTS -lt $MAX_ATTEMPTS ]; do \
