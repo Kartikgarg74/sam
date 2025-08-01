@@ -1,14 +1,7 @@
-import os
-import sys
 import logging
 from dotenv import load_dotenv
-
-# Add the project root to the Python path to enable absolute imports
-project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', '..'))
-if project_root not in sys.path:
-    sys.path.insert(0, project_root)
-logging.info(f"Project root added to sys.path: {project_root}")
-logging.info(f"Current sys.path: {sys.path}")
+import os
+import sys
 
 # Load environment variables from .env file
 load_dotenv()
