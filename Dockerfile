@@ -60,10 +60,11 @@ WORKDIR /app
 # Install supervisor, serve, gunicorn, and uvicorn for production
 RUN set -eux; \
     apt-get clean && \
-    apt-get update
+    DEBIAN_FRONTEND=noninteractive apt-get update --fix-missing
 RUN set -eux; \
     apt-get install -y apt-transport-https ca-certificates supervisor && \
-    apt-get clean && rm -rf /var/lib/apt/lists/* && \
+    apt-get clean && rm -rf /var/lib/apt/lists/*
+RUN set -eux; \
     pip install --no-cache-dir serve gunicorn uvicorn
 
 # Copy built frontend from frontend-builder stage
