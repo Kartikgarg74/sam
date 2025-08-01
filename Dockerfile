@@ -2,7 +2,9 @@
 FROM node:18-alpine as frontend-builder
 
 
-WORKDIR /app/samantha_ai_assistant/apps/samantha-web
+WORKDIR /app
+
+ENV PYTHONPATH=/app:$PYTHONPATH
 COPY samantha_ai_assistant/apps/samantha-web/package.json /app/samantha_ai_assistant/apps/samantha-web/package.json
 
 
