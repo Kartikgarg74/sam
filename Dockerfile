@@ -65,7 +65,17 @@ RUN set -eux; \
     apt-get install -y apt-transport-https ca-certificates supervisor && \
     apt-get clean && rm -rf /var/lib/apt/lists/*
 RUN set -eux; \
-    pip install --no-cache-dir serve gunicorn uvicorn
+    ATTEMPTS=0; \
+    MAX_ATTEMPTS=5; \
+    while ! pip install --no-cache-dir serve gunicorn uvicorn && [ $ATTEMPTS -lt $MAX_ATTEMPTS ]; do \
+        ATTEMPTS=$((ATTEMPTS+1)); \
+        echo "pip install failed. Retrying in 5 seconds... (Attempt $ATTEMPTS/$MAX_ATTEMPTS)"; \
+        sleep 5; \
+    done; \
+    if [ $ATTEMPTS -eq $MAX_ATTEMPTS ]; then \
+        echo "pip install failed after $MAX_ATTEMPTS attempts."; \
+        exit 1; \
+    fi
 
 # Copy built frontend from frontend-builder stage
 COPY --from=frontend-builder /app/samantha_ai_assistant/apps/samantha-web/dist /app/samantha_ai_assistant/apps/samantha-web/dist
