@@ -89,13 +89,17 @@ COPY --from=backend-builder /app/apps/samantha-backend ./apps/samantha-backend
 # Copy the entire project structure to maintain relative paths
 COPY . .
 
-# NOTE: Procfile and supervisord.conf are assumed to be in the root of your project
-# (/Users/kartikgarg/Downloads/SAM/). If your Dockerfile is now in samantha_ai_assistant/,
-# these files are outside the build context and cannot be copied directly.
-# You will need to move them into the samantha_ai_assistant/ directory or adjust your build command
-# to use the project root as the context (e.g., `docker build -f samantha_ai_assistant/Dockerfile .`)
-# COPY Procfile .
-# COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+# Ensure __init__.py files exist to treat directories as Python packages
+RUN touch /app/samantha_ai_assistant/__init__.py \
+    && touch /app/samantha_ai_assistant/apps/__init__.py \
+    && touch /app/samantha_ai_assistant/apps/samantha-backend/__init__.py \
+    && touch /app/samantha_ai_assistant/packages/__init__.py \
+    && touch /app/samantha_ai_assistant/packages/voice_processing/__init__.py
+
+# Install the samantha_ai_assistant package in editable mode
+RUN pip install -e .
+
+
 
 # Expose port for the backend
 EXPOSE 8000
