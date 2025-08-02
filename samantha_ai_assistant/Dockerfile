@@ -2,8 +2,11 @@
 FROM node:18-alpine as frontend-builder
 
 
-WORKDIR /app/samantha_ai_assistant/apps/samantha-web
-COPY samantha_ai_assistant/apps/samantha-web/package.json /app/samantha_ai_assistant/apps/samantha-web/package.json
+WORKDIR /app
+
+# Set PYTHONPATH to include the root of the application
+ENV PYTHONPATH=/app
+COPY apps/samantha-web/package.json ./apps/samantha-web/package.json
 
 
 RUN set -eux; \
@@ -20,7 +23,7 @@ RUN set -eux; \
         exit 1; \
     fi; \
     pnpm store prune
-COPY samantha_ai_assistant/apps/samantha-web/ .
+COPY apps/samantha-web/ ./apps/samantha-web/
 
 RUN set -eux; \
     ATTEMPTS=0; \
@@ -37,12 +40,12 @@ RUN set -eux; \
 
 # Stage 2: Build the backend
 FROM python:3.11-slim-bullseye as backend-builder
-WORKDIR /app/samantha_ai_assistant/apps/samantha-backend
-COPY samantha_ai_assistant/apps/samantha-backend/requirements.txt .
+WORKDIR /app
+COPY apps/samantha-backend/requirements.txt ./apps/samantha-backend/requirements.txt
 RUN set -eux; \
     ATTEMPTS=0; \
     MAX_ATTEMPTS=5; \
-    while ! pip install --no-cache-dir -r requirements.txt && [ $ATTEMPTS -lt $MAX_ATTEMPTS ]; do \
+    while ! pip install --no-cache-dir -r apps/samantha-backend/requirements.txt && [ $ATTEMPTS -lt $MAX_ATTEMPTS ]; do \
         ATTEMPTS=$((ATTEMPTS+1)); \
         echo "pip install failed. Retrying in 5 seconds... (Attempt $ATTEMPTS/$MAX_ATTEMPTS)"; \
         sleep 5; \
@@ -51,7 +54,7 @@ RUN set -eux; \
         echo "pip install failed after $MAX_ATTEMPTS attempts."; \
         exit 1; \
     fi
-COPY samantha_ai_assistant/apps/samantha-backend/ .
+COPY apps/samantha-backend/ ./apps/samantha-backend/
 
 # Stage 3: Final image
 FROM python:3.11-slim-bullseye
@@ -78,15 +81,21 @@ RUN set -eux; \
     fi
 
 # Copy built frontend from frontend-builder stage
-COPY --from=frontend-builder /app/samantha_ai_assistant/apps/samantha-web/dist /app/samantha_ai_assistant/apps/samantha-web/dist
+COPY --from=frontend-builder /app/apps/samantha-web/dist ./apps/samantha-web/dist
 
 # Copy built backend from backend-builder stage
-COPY --from=backend-builder /app/samantha_ai_assistant/apps/samantha-backend /app/samantha_ai_assistant/apps/samantha-backend
+COPY --from=backend-builder /app/apps/samantha-backend ./apps/samantha-backend
 
 # Copy the entire project structure to maintain relative paths
-COPY samantha_ai_assistant samantha_ai_assistant
-COPY Procfile .
-COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
+COPY . .
+
+# NOTE: Procfile and supervisord.conf are assumed to be in the root of your project
+# (/Users/kartikgarg/Downloads/SAM/). If your Dockerfile is now in samantha_ai_assistant/,
+# these files are outside the build context and cannot be copied directly.
+# You will need to move them into the samantha_ai_assistant/ directory or adjust your build command
+# to use the project root as the context (e.g., `docker build -f samantha_ai_assistant/Dockerfile .`)
+# COPY Procfile .
+# COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
 # Expose port for the backend
 EXPOSE 8000
