@@ -84,20 +84,28 @@ RUN set -eux; \
 COPY --from=frontend-builder /app/apps/samantha-web/dist ./apps/samantha-web/dist
 
 # Copy built backend from backend-builder stage
-COPY --from=backend-builder /app/apps/samantha-backend ./apps/samantha-backend
+COPY --from=backend-builder /app/apps/samantha-backend/ ./apps/samantha-backend
 
 # Copy the entire project structure to maintain relative paths
-COPY . .
+
+
+COPY apps/samantha-backend/main.py /app/main.py
+COPY . /app/samantha_ai_assistant
 
 # Ensure __init__.py files exist to treat directories as Python packages
-RUN touch /app/samantha_ai_assistant/__init__.py \
-    && touch /app/samantha_ai_assistant/apps/__init__.py \
-    && touch /app/samantha_ai_assistant/apps/samantha-backend/__init__.py \
-    && touch /app/samantha_ai_assistant/packages/__init__.py \
-    && touch /app/samantha_ai_assistant/packages/voice_processing/__init__.py
+RUN touch \
+    /app/samantha_ai_assistant/__init__.py \
+    /app/samantha_ai_assistant/apps/__init__.py \
+    /app/samantha_ai_assistant/apps/samantha-backend/__init__.py \
+    /app/samantha_ai_assistant/packages/__init__.py \
+    /app/samantha_ai_assistant/packages/voice_processing/__init__.py
 
 # Install the samantha_ai_assistant package in editable mode
-RUN pip install -e .
+RUN pip install -e /app/samantha_ai_assistant
+
+# Copy Procfile and supervisord.conf from the parent directory
+COPY ../Procfile /app/Procfile
+COPY ../supervisord.conf /app/supervisord.conf
 
 
 
@@ -105,4 +113,4 @@ RUN pip install -e .
 EXPOSE 8000
 
 # Command to run the application using Procfile
-CMD ["/usr/bin/supervisord", "-c", "/etc/supervisor/conf.d/supervisord.conf"]
+CMD ["/usr/bin/supervisord", "-c", "/app/supervisord.conf"]
