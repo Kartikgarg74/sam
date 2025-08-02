@@ -90,7 +90,7 @@ COPY --from=backend-builder /app/apps/samantha-backend/ ./apps/samantha-backend
 
 
 COPY apps/samantha-backend/main.py /app/main.py
-COPY . /app/samantha_ai_assistant
+COPY samantha_ai_assistant/ /app/samantha_ai_assistant/
 
 # Ensure __init__.py files exist to treat directories as Python packages
 RUN touch \
@@ -104,8 +104,8 @@ RUN touch \
 RUN pip install -e /app/samantha_ai_assistant
 
 # Copy Procfile and supervisord.conf from the parent directory
-COPY ../Procfile /app/Procfile
-COPY ../supervisord.conf /app/supervisord.conf
+COPY Procfile /app/Procfile
+COPY supervisord.conf /app/supervisord.conf
 
 
 
